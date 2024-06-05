@@ -1,0 +1,32 @@
+// PASTE CUSTOM STYLING HERE
+.header{
+    background-color: #000000;
+    .topbar{
+        background: #48A9C5;
+        padding: 5px 0;
+        p{
+            font-family: "Oswald", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            line-height: 22px !important;
+        }
+    }
+    .header-logo-image-container:after{
+        display: none;
+    }
+    .header-logo-image{
+        max-width: 171px;
+        margin: 0 auto;
+        position: relative;
+        
+    }
+    .navUser-action {
+        svg{
+            stroke: #fff;
+            fill: #fff;
+        }
+    }
+}
