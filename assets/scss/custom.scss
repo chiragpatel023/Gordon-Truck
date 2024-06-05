@@ -29,4 +29,35 @@
             fill: #fff;
         }
     }
+    .navUser {
+        .search-icon {
+            width: 33px;
+            svg{
+                stroke: #fff;
+                fill: #fff;
+                z-index: 999999;
+                left: -6px;
+            }
+        }
+        .dropdown--quickSearch.desktop {
+            max-width: 420px;
+            position: absolute;
+        }
+        .dropdown--quickSearch .form-input {
+            width: 420px;
+            height: 40px;
+            border: 1px solid #D4D4D4;
+            border-radius: 5px;
+            padding: 0 0 0 15px !important;
+        }
+        .search-icon.submit input {
+            padding: 5px !important;
+            background: #48A9C5 !important;
+            width: 33px !important;
+            height: 33px !important;
+            border-radius: 5px;
+            left: -6px;
+        }
+    }
+    
 }
