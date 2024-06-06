@@ -809,7 +809,7 @@
     "search": {
         "quick_search": {
             "input_label": "Search",
-            "input_placeholder": "Search"
+            "input_placeholder": "Search Part #, Category, or Keywords"
         },
         "results": {
            "form_label": "Search Keyword:",

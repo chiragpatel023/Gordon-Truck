@@ -1,4 +1,5 @@
 // PASTE CUSTOM STYLING HERE
+body {font-family: "Oswald", sans-serif;}
 .header{
     background-color: #000000;
     .topbar{
@@ -14,6 +15,7 @@
             line-height: 22px !important;
         }
     }
+    .header-logo {max-width: 250px;}
     .header-logo-image-container:after{
         display: none;
     }
@@ -57,6 +59,40 @@
             height: 33px !important;
             border-radius: 5px;
             left: -6px;
+        }
+
+        .customer_support {
+            color: #ffffff !important;
+            margin-right: 50px;
+            
+            ul {
+                margin-top: 12px;
+            }
+            ul li {
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                margin-left: 4px;
+            }
+            .heading {
+                font-size: 12px;
+            }
+            .subheading {
+                font-size: 10px;
+            }
+            .status {
+                background: #5E9B41;
+                height: 6px;
+                width: 6px;
+                float: left;
+                border-radius: 50%;
+                margin-top: 10px;
+            }
+            .support_detail {
+                .support_arrow {
+                    margin-left: 8px;
+                }
+            }
         }
     }
     
