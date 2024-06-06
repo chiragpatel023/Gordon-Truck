@@ -112,35 +112,38 @@
             {{/if}}
     </div>
 
-    <div class="payment-icons-section">
+    {{!-- <div class="payment-icons-section">
       <hr class="border"/>
       {{> components/common/payment-icons}}
-    </div>
+    </div> --}}
 
     <div class="footer-bottom">
       {{#if settings.address}}
-      <article class="store-info" data-section-type="storeInfo">
+      {{!-- <article class="store-info" data-section-type="storeInfo">
           <address>{{settings.address}}</address>
           {{#if settings.phone_number}}
               {{settings.phone_number}}
           {{/if}}
-      </article>
+      </article> --}}
       {{/if}}
 
-      {{#if theme_settings.show_powered_by}}
+      {{!-- #if theme_settings.show_powered_by}}
         <div class="footer-copyright">
             <p class="powered-by text">Powered by <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></p>
         </div>
-      {{/if}}
-      {{#if theme_settings.show_created_by}}
+      {{/if --}}
+      {{!-- #if theme_settings.show_created_by}}
         <div class="footer-copyright">
           <p class="powered-by created-by text">Created by <a href="https://lonestartemplates.com/" rel="nofollow">Lone Star Templates</a></p>
         </div>
-      {{/if}}
-
+      {{/if --}}
+        <div class="footer-copyright">
+          {{> components/common/social-links}}
+        </div>
+      
       {{#if theme_settings.show_copyright_footer}}
         <div class="footer-copyright">
-            <p class="powered-by text">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
+            <p class="powered-by text">&copy; {{moment format="YYYY"}} {{settings.store_name}}. Inc. All rights reserved.</p>
         </div>
       {{/if}}
     </div> <!-- footer-bottom -->
