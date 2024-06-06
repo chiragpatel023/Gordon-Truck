@@ -1,4 +1,5 @@
 // PASTE CUSTOM STYLING HERE
+body {font-family: "Oswald", sans-serif;}
 .header{
     background-color: #000000;
     .topbar{
@@ -63,6 +64,7 @@
         .customer_support {
             color: #ffffff !important;
             margin-right: 50px;
+            
             ul {
                 margin-top: 12px;
             }
@@ -78,11 +80,18 @@
             .subheading {
                 font-size: 10px;
             }
-            .support_icon {
-
+            .status {
+                background: #5E9B41;
+                height: 6px;
+                width: 6px;
+                float: left;
+                border-radius: 50%;
+                margin-top: 10px;
             }
             .support_detail {
-
+                .support_arrow {
+                    margin-left: 8px;
+                }
             }
         }
     }
