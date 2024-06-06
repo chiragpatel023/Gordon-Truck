@@ -1,3 +1,37 @@
+/*
+* Variables for breakpoints
+*/
+$mobile: 480px;
+$mobile-landscape: 568px;
+$tablet: 768px;
+$desktop: 991px;
+
+/*
+* Map for breakpoints
+*/
+$breakpoints: (
+  "mobile": (
+    max-width: $mobile,
+  ),
+  "small": (
+    max-width: $mobile-landscape,
+  ),
+  "medium": (
+    max-width: $tablet,
+  ),
+  "large": (
+    max-width: $desktop,
+  ),
+); 
+
+@mixin responsive($size) {
+    $query: map-get($breakpoints, $size);
+  
+      @media #{$query} {
+        @content;
+    }
+  }
+
 #consent-manager {
     .css-10z1g2q {
         background-color: #000;
@@ -6,6 +40,9 @@
 
 .footer{
     background-color: #000;
+    @include responsive("small"){
+        display: none;
+    }
     .footer-bottom{
         background-color: #000;
     }
