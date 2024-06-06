@@ -1,0 +1,101 @@
+// PASTE CUSTOM STYLING HERE
+body {font-family: "Oswald", sans-serif;}
+.header{
+    background-color: #000000;
+    .topbar{
+        background: #48A9C5;
+        padding: 5px 0;
+        p{
+            font-family: "Oswald", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            line-height: 22px !important;
+        }
+    }
+    .header-logo {max-width: 250px;}
+    .header-logo-image-container:after{
+        display: none;
+    }
+    .header-logo-image{
+        max-width: 171px;
+        margin: 0 auto;
+        position: relative;
+        
+    }
+    .navUser-action {
+        svg{
+            stroke: #fff;
+            fill: #fff;
+        }
+    }
+    .navUser {
+        .search-icon {
+            width: 33px;
+            svg{
+                stroke: #fff;
+                fill: #fff;
+                z-index: 999999;
+                left: -6px;
+            }
+        }
+        .dropdown--quickSearch.desktop {
+            max-width: 420px;
+            position: absolute;
+        }
+        .dropdown--quickSearch .form-input {
+            width: 420px;
+            height: 40px;
+            border: 1px solid #D4D4D4;
+            border-radius: 5px;
+            padding: 0 0 0 15px !important;
+        }
+        .search-icon.submit input {
+            padding: 5px !important;
+            background: #48A9C5 !important;
+            width: 33px !important;
+            height: 33px !important;
+            border-radius: 5px;
+            left: -6px;
+        }
+
+        .customer_support {
+            color: #ffffff !important;
+            margin-right: 50px;
+            @include breakpoint ("small") {
+                display: none;
+            }
+            ul {
+                margin-top: 12px;
+            }
+            ul li {
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                margin-left: 4px;
+            }
+            .heading {
+                font-size: 12px;
+            }
+            .subheading {
+                font-size: 10px;
+            }
+            .status {
+                background: #5E9B41;
+                height: 6px;
+                width: 6px;
+                float: left;
+                border-radius: 50%;
+                margin-top: 10px;
+            }
+            .support_detail {
+                .support_arrow {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+    
+}
