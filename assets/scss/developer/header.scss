@@ -2,6 +2,39 @@
 body {font-family: "Oswald", sans-serif;}
 .header{
     background-color: #000000;
+    @include responsive ("small") {
+        height: 82px !important;
+        color: #000000;
+        .logo-user-section.container.fixed {
+            background-color: #000000 !important;
+        }
+        .logo-user-section.container.fixed.fixed-again .user-icons svg {
+            fill: #ffffff !important;
+            color: #ffffff !important;
+        }
+        .mobileMenu-toggleIcon::after {
+            background: #ffffff !important;
+        }
+        .mega-cat-dropdown {
+            top: 35px;
+            width: 100%;
+            background-color: #000000;
+            right: -320px !important
+        }
+        .mega-cat-dropdown li.navPages-item a.navPages-action {
+            color: #ffffff !important;
+            font-weight: 400;
+        }
+        .mega-cat-dropdown h2 {
+            color: #ffffff;
+        }
+        #menu .navPages ul, .navPage-subMenu, .navPages-item {
+            background-color: #000000;
+        }
+        .mega-cat-dropdown .sticky-navpages svg {
+            fill: #ffffff !important;
+        }
+    }
     .topbar{
         background: #48A9C5;
         padding: 5px 0;
@@ -13,6 +46,9 @@ body {font-family: "Oswald", sans-serif;}
             text-align: center;
             color: #fff;
             line-height: 22px !important;
+            @include responsive ("small") {
+                font-size: 10px;
+            }
         }
     }
     .header-logo {max-width: 250px;}
@@ -20,7 +56,7 @@ body {font-family: "Oswald", sans-serif;}
         display: none;
     }
     .header-logo-image{
-        max-width: 171px;
+        max-width: 200px;
         margin: 0 auto;
         position: relative;
         
@@ -32,6 +68,16 @@ body {font-family: "Oswald", sans-serif;}
         }
     }
     .navUser {
+        @include responsive ("small") {
+            .navUser-action, .navUser-item--account { 
+                display: none;
+            }
+            svg, li.navUser-item.quicksearch.mobile svg {
+                fill: #ffffff !important;
+                width: 18px !important;
+                height: 18px !important;
+            }
+        }
         .search-icon {
             width: 33px;
             svg{
@@ -64,7 +110,7 @@ body {font-family: "Oswald", sans-serif;}
         .customer_support {
             color: #ffffff !important;
             margin-right: 50px;
-            @include breakpoint ("small") {
+            @include responsive ("small") {
                 display: none;
             }
             ul {
@@ -73,7 +119,6 @@ body {font-family: "Oswald", sans-serif;}
             ul li {
                 display: inline-block;
                 vertical-align: middle;
-                text-align: center;
                 margin-left: 4px;
             }
             .heading {
@@ -88,7 +133,8 @@ body {font-family: "Oswald", sans-serif;}
                 width: 6px;
                 float: left;
                 border-radius: 50%;
-                margin-top: 10px;
+                margin-top: 6px;
+                margin-right: 5px;
             }
             .support_detail {
                 .support_arrow {
@@ -97,5 +143,37 @@ body {font-family: "Oswald", sans-serif;}
             }
         }
     }
-    
+
+    #menu-wrapper {
+        .navPages-list {
+            float: left;
+            .navPages-action {
+                padding: 1rem 1.6rem 1.14286rem;
+            }
+        }
+        .nav-right {
+            width: 80%;
+        }
+        .navPages-action {
+            font-size: 14px;
+            font-weight: 400;
+            color: #000000;
+            .burger-menu {
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+        .burger-menu-arrow {
+            margin-top: 8px;
+            margin-left: 5px;
+        }
+        .navPages-list li .pipe {
+            border-left: 2px solid #E0E0DF;
+        }
+    }
+    .fixed {
+        .customer_support {
+            display: none;
+        }   
+    }
 }
