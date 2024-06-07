@@ -21,19 +21,45 @@
 
 {{/if}}
 
-<div class="newsletter-subscription-section">
-  <article class="newsletter cta" data-section-type="newsletterSubscription">
-    {{#if settings.show_newsletter_box}}
-        {{> components/common/subscription-form}}
-    {{/if}}
-    <div class="clear"></div>
-  </article>
-</div>
+
 
 <footer class="footer" role="contentinfo">
     <div class="container">
+        <div class="footer-store-details">
+          <div class="store-col-3">
+            <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.428571" y="0.928571" width="47.1429" height="47.1429" rx="23.5714" stroke="#959595" stroke-width="0.857143"/>
+              <path d="M29.4543 28.4054L23.9994 33.9284L18.5446 28.4054C15.532 25.3549 15.532 20.4094 18.5446 17.359C21.5572 14.3087 26.4416 14.3087 29.4543 17.359C32.4669 20.4094 32.4669 25.3549 29.4543 28.4054ZM23.9994 24.6179C24.9462 24.6179 25.7137 23.8408 25.7137 22.8822C25.7137 21.9236 24.9462 21.1464 23.9994 21.1464C23.0526 21.1464 22.2852 21.9236 22.2852 22.8822C22.2852 23.8408 23.0526 24.6179 23.9994 24.6179Z" fill="white"/>
+            </svg>              
+            <div class="block-content">
+              <span>Full Address</span>
+              <p>Gordon Truck Centers, Inc. 277 Stewart Rd SW <br>Pacific, WA 98047</p>
+            </div>
+          </div>
+          <div class="store-col-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+              <rect x="0.428571" y="0.928571" width="47.1429" height="47.1429" rx="23.5714" stroke="#959595" stroke-width="0.857143"/>
+              <path d="M33 28.92V32.4561C33 32.9811 32.5941 33.4167 32.0705 33.4537C31.6331 33.4846 31.2763 33.5 31 33.5C22.1634 33.5 15 26.3366 15 17.5C15 17.2237 15.0155 16.8669 15.0464 16.4295C15.0834 15.9059 15.5189 15.5 16.0439 15.5H19.5801C19.8368 15.5 20.0518 15.6944 20.0775 15.9498C20.1007 16.1791 20.1222 16.3631 20.1421 16.502C20.3443 17.9147 20.7575 19.2594 21.3487 20.503C21.4436 20.7026 21.3817 20.9416 21.2018 21.0701L19.0436 22.6118C20.3575 25.6811 22.8189 28.1425 25.8882 29.4565L27.4271 27.3019C27.5572 27.1199 27.799 27.0573 28.001 27.1532C29.2446 27.7439 30.5891 28.1566 32.0016 28.3584C32.1396 28.3782 32.3225 28.3995 32.5502 28.4225C32.8056 28.4483 33 28.6633 33 28.92Z" fill="white"/>
+            </svg>             
+            <div class="block-content">
+              <span>Number Phone</span>
+              <p>(800) 523-8014</p>
+            </div>
+          </div>
+          <div class="store-col-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+              <rect x="0.428571" y="0.928571" width="47.1429" height="47.1429" rx="23.5714" stroke="#959595" stroke-width="0.857143"/>
+              <path d="M33.25 15.5H15.25C14.0125 15.5 13.0112 16.5125 13.0112 17.75L13 31.25C13 32.4875 14.0125 33.5 15.25 33.5H33.25C34.4875 33.5 35.5 32.4875 35.5 31.25V17.75C35.5 16.5125 34.4875 15.5 33.25 15.5ZM33.25 20L24.25 25.625L15.25 20V17.75L24.25 23.375L33.25 17.75V20Z" fill="white"/>
+            </svg>              
+            <div class="block-content">
+              <span>Email Address</span>
+              <p>help@gradontruckcentres.com</p>
+            </div>
+          </div>
+        </div>
+
         <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small-4" data-section-type="footer-webPages">
+            <article class="footer-info-col footer-info-col--small-5" data-section-type="footer-webPages">
                 <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
                 <ul class="footer-info-list">
                     {{#each pages}}
@@ -58,34 +84,35 @@
                 </ul>
             </article>
 
-            <article class="footer-info-col footer-info-col--small-4 categories" data-section-type="footer-categories">
-                <h5 class="footer-info-heading">{{lang 'footer.categories'}}</h5>
-                <ul class="footer-info-list categories">
-                    {{#each categories}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <div class="footer-categories-pagination">
-                      <a class="navPages-action paginator previous arrow">
-                        <i class="icon prev" aria-hidden="true">
-                          <svg><use xlink:href="#icon-chevron-left" /></svg>
-                        </i>
-                        <span class="pagination-label">prev</span>
-                      </a>
-                      <span class="dots"></span>
-                      <a class="navPages-action paginator next arrow">
-                        <span class="pagination-label">next</span>
-                        <i class="icon next" aria-hidden="true">
-                          <svg><use xlink:href="#icon-chevron-left" /></svg>
-                        </i>
-                      </a>
-                    </div>
-                </ul>
-            </article>
+            <article class="footer-info-col footer-info-col--small-5 categories" data-section-type="footer-categories">
+              <h5 class="footer-info-heading">{{lang 'footer.categories'}}</h5>
+              <ul class="footer-info-list categories">
+                  {{#each categories}}
+                      <li>
+                          <a href="{{url}}">{{name}}</a>
+                      </li>
+                  {{/each}}
+                  <div class="footer-categories-pagination">
+                    <a class="navPages-action paginator previous arrow">
+                      <i class="icon prev" aria-hidden="true">
+                        <svg><use xlink:href="#icon-chevron-left" /></svg>
+                      </i>
+                      <span class="pagination-label">prev</span>
+                    </a>
+                    <span class="dots"></span>
+                    <a class="navPages-action paginator next arrow">
+                      <span class="pagination-label">next</span>
+                      <i class="icon next" aria-hidden="true">
+                        <svg><use xlink:href="#icon-chevron-left" /></svg>
+                      </i>
+                    </a>
+                  </div>
+              </ul>
+          </article>
+          
 
             {{#and theme_settings.shop_by_brand_show_footer shop_by_brand.length}}
-            <article class="footer-info-col footer-info-col--small-4" data-section-type="footer-brands">
+            <article class="footer-info-col footer-info-col--small-5" data-section-type="footer-brands">
                 <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
                 <ul class="footer-info-list">
                     {{#each shop_by_brand}}
@@ -97,8 +124,29 @@
                 </ul>
             </article>
             {{/and}}
-
-            {{#if theme_settings.show_social_icons '===' true}}
+            <article class="footer-info-col footer-info-col--small-5" data-section-type="footer-brands">
+              <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
+              <ul class="footer-info-list">
+                  {{#each shop_by_brand}}
+                      <li>
+                          <a href="{{url}}">{{name}}</a>
+                      </li>
+                  {{/each}}
+                  <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
+              </ul>
+          </article>
+          <article class="footer-info-col footer-info-col--small-5" data-section-type="footer-brands">
+                <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
+                <ul class="footer-info-list">
+                    {{#each shop_by_brand}}
+                        <li>
+                            <a href="{{url}}">{{name}}</a>
+                        </li>
+                    {{/each}}
+                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
+                </ul>
+            </article>
+            {{!-- #if theme_settings.show_social_icons '===' true}}
               <article class="footer-info-col footer-info-col--small-4" data-section-type="footer-webPages">
                 <h5 class="footer-info-heading">{{lang 'social.connect'}}</h5>
                   {{> components/common/social-links}}
@@ -109,7 +157,7 @@
                   {{/if}}
                   {{{region name="ssl_site_seal--global"}}}
               </article>
-            {{/if}}
+            {{/if --}}
     </div>
 
     {{!-- <div class="payment-icons-section">
