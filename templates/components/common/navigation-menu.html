@@ -8,7 +8,7 @@
   <div class="mega-cat-nav {{#if theme_settings.show_logo_in_sticky_nav '===' true}}sticky-logo{{/if}}">
     <li class="navPages-item navPages-item-page container-header btn">
       <a class="navPages-action">
-        <svg class="mega-menu-icon open"><use xlink:href="#icon-v-menu" /></svg><svg class="mega-menu-icon close"><use xlink:href="#icon-close" ></svg><span class="burger-menu">{{theme_settings.mega_nav_name}}</span><span class="burger-menu fixed">{{theme_settings.sticky_mega_nav_name}}</span>
+        <svg class="mega-menu-icon open"><use xlink:href="#icon-v-menu" /></svg><svg class="mega-menu-icon close"><use xlink:href="#icon-close" ></svg><span class="burger-menu">{{theme_settings.mega_nav_name}}</span><span class="burger-menu fixed">{{theme_settings.sticky_mega_nav_name}}</span><i class="fa fa-chevron-down main-nav desktop-only burger-menu-arrow" aria-hidden="true"></i>
       </a>
       <div class="clear"></div>
     </li>
@@ -47,7 +47,7 @@
         {{/if}}
 
         <!-- BRANDS VISIBILITY -->
-        <div class="brands {{#if theme_settings.show_brands_in_main_mega_nav '===' false}}brands-hidden {{/if}}{{#if theme_settings.show_brands_in_sticky_nav '===' false}}sticky-brands-hidden{{/if}}">
+        <!-- <div class="brands {{#if theme_settings.show_brands_in_main_mega_nav '===' false}}brands-hidden {{/if}}{{#if theme_settings.show_brands_in_sticky_nav '===' false}}sticky-brands-hidden{{/if}}">
           <h2 class="container-header mobile">Brands</h2>
             {{#each shop_by_brand}}
                    <li class="navPages-item mobile">
@@ -57,7 +57,7 @@
                     <li class="navPages-item mobile view-all brands">
                         <a class="navPages-action" href="/brands/">View all Brands</a>
                     </li>
-        </div>
+        </div> -->
         {{#if customer.store_credit.value '>' 0}}
         <ul class="nav-user-menu">
             <li class="navUser-item navUser-item--storecredit">
