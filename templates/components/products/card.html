@@ -18,6 +18,7 @@
         {{/or}}
         <a href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>
            <div class="card-img-container">
+                <img class="card-wishlist" src="{{cdn '/assets/img/card-wishlist.png'}}">
                {{> components/common/responsive-img
                    image=image
                    class="card-image"
@@ -65,16 +66,11 @@
         </figcaption> <!-- card-figcaption desktop -->
     </figure>
     <div class="card-body">
-        {{#and rating show_rating}}
-            <p class="card-text" data-test-info-type="productRating">
-                <span class="rating--small">
-                    {{> components/products/ratings rating=rating}}
-                </span>
-            </p>
-        {{/and}}
+        <p class="card-text brand_name" data-test-info-type="brandName">
         {{#if brand.name}}
-            <p class="card-text" data-test-info-type="brandName">{{brand.name}}</p>
+            {{brand.name}}
         {{/if}}
+        </p>    
         <h4 class="card-title">
             {{#if demo}}
                 {{name}}
@@ -83,14 +79,38 @@
             {{/if}}
         </h4>
 
-        <div class="card-text" data-test-info-type="price">
+
+        {{#and rating show_rating}}
+            
+        {{/and}}
+        <p class="card-text productRating" data-test-info-type="productRating">
+            <span class="rating--small">
+                {{> components/products/ratings rating=rating}}
+            </span>
+        </p>
+
+        <div class="card-text price" data-test-info-type="price">
+            {{> components/products/bulk-discount-rates}}
             {{#or customer (unless settings.hide_price_from_guests)}}
                 {{> components/products/price price=price}}
             {{else}}
                 {{> components/common/login-for-pricing}}
             {{/or}}
         </div>
-        {{> components/products/bulk-discount-rates}}
+
+        {{#if has_options}}
+            <a href="{{url}}" data-event-type="product-click" class="button button--small card-figcaption-button card-cart-btn" data-product-id="{{id}}">{{lang 'products.choose_options'}}</a>
+        {{/if}}
+        {{#if pre_order}}
+            <a href="{{pre_order_add_to_cart_url}}" data-event-type="product-click" class="button button--small card-figcaption-button card-cart-btn">{{lang 'products.pre_order'}}</a>
+        {{/if}}
+        {{#if add_to_cart_url }}
+        <a href="{{add_to_cart_url}}" data-event-type="product-click" class="button button--small card-figcaption-button card-cart-btn"><img src="{{cdn '/assets/img/add-to-cart.png'}}"> <span>{{lang 'products.add_to_cart'}}</span></a>
+        {{/if}}
+        {{#if out_of_stock_message }}
+            <a href="{{url}}" data-event-type="product-click" class="button button--small card-figcaption-button card-cart-btn" data-product-id="{{id}}">{{out_of_stock_message}}</a>
+        {{/if}}
+        
     </div>
     <figcaption class="card-figcaption mobile">
         <div class="card-figcaption-body">
@@ -110,7 +130,8 @@
                     {{lang 'products.compare'}} <input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}" data-compare-id="{{id}}">
                 </label>
             {{/if}}
-            {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+            
+            <!-- {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
                 {{#if show_cart_action}}
                     {{#if has_options}}
                         <a href="{{url}}" data-event-type="product-click" class="button button--small card-figcaption-button" data-product-id="{{id}}">{{lang 'products.choose_options'}}</a>
@@ -125,7 +146,7 @@
                         <a href="{{url}}" data-event-type="product-click" class="button button--small card-figcaption-button" data-product-id="{{id}}">{{out_of_stock_message}}</a>
                     {{/if}}
                 {{/if}}
-            {{/or}}
+            {{/or}} -->
          </div>
     </figcaption> <!-- card-figcaption mobile -->
 </article>
