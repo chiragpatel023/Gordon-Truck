@@ -789,10 +789,10 @@
         "comments": "Comments"
     },
     "newsletter": {
-        "subscribe": "Join our newsletter",
-        "subscribe_intro": "Get the latest updates on new products and upcoming sales!",
-        "subscribe_submit": "Subscribe",
-        "email_placeholder": "email address",
+        "subscribe": "STAY UPTO DATE WITH LATEST NEWS",
+        "subscribe_intro": "SUBSCRIBE TO WEEKLY NEWSLETTER",
+        "subscribe_submit": "Sign Up",
+        "email_placeholder": "Enter your email address",
         "subscribed_heading": "Thanks for Subscribing!",
         "subscribed_heading_error": "Oops...",
         "subscribed_message": "Thank you for joining our mailing list. You'll be sent the next issue of our newsletter shortly",
