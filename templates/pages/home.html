@@ -671,6 +671,34 @@ blog:
     {{/if}}
     {{{region name="home_below_new_products"}}}
   <!-- END NEW PRODUCTS SECTION -->
+
+  <div class="blog-section">
+    <h2 class="blog-sidebar-heading">Latest News and Events </h2>
+    <!--{{json blog}}-->
+    <ul>
+      {{#each blog.recent_posts}}
+        <li class="blog-sidebar-item">
+          <a href="{{url}}">
+            <div class="blog_img">
+              <img src="{{cdn 'assets/img/placeholder.png'}}" />
+            </div>
+            <div class="blog_title">
+              <span class="blog-sidebar-link-title">{{title}}</span>
+            </div>
+            <div class="blog_author">
+            {{#if author}}
+              <span class="author">
+                {{author}}
+              </span>
+            {{/if}}
+            <span class="date_pipe">|</span><span class="posted_date">{{date_published}}</span>
+            </div>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+
 </div>
 {{/partial}}
 {{> layout/home}}
