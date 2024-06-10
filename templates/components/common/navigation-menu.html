@@ -18,7 +18,9 @@
 
         <div id="page-wrapper">
         <div class="category-list">
-          <h2 class="container-header mobile">Categories</h2>
+          <h2 class="container-header mobile custom_link"><a href="/account.php"><img src="{{cdn 'img/my-account.png'}}"> My Account</a> <a href="/login.php" class="right-link">Login/Sign up</a></a></h2>
+          <h2 class="container-header mobile custom_link"><a href="/wishlist.php"><img src="{{cdn 'img/wishlist.png'}}"> My List</a> <span class="wishlist_count">0</span></h2>
+          <h2 class="container-header mobile">Shop by Categories</h2> <i class="icon mega-nav-pages mobile-submenu-icon" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down"></use></svg></i>
         {{#each categories}}
           <li class="navPages-item top-level categories{{#if is_active}} activePage{{/if}}">
           {{#if ../theme_settings.navigation_design '===' 'simple'}}
@@ -37,7 +39,6 @@
 
         {{#if theme_settings.show_pages_in_mobile_nav '===' true}}
         <div class="sticky-navpages">
-          <h2 class="container-header mobile">Navigation</h2>
           {{#each pages}}
             <li class="navPages-item top-level{{#if is_active}} activePage{{/if}} pages mega-nav-pages">
                 {{> components/common/mega-nav-page-list}}

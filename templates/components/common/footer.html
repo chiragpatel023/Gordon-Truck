@@ -1163,12 +1163,27 @@ $(document).ready(function() {
         $(this).parent('.navPages-action').siblings('.navPage-childList').toggleClass('visible').slideToggle();
         console.log("arrow click");
         
+
+
+
     // } else {
     //   // $(this).parents('li.navPages-item.top-level.mega-nav-pages').find('.second-level-flyout').slideUp();
     //   // $(this).parents('li.navPages-item.top-level.mega-nav-pages').find('i.icon.navPages-action-moreIcon').removeClass('mobile-icon-active');
     // }
       event.preventDefault();
     });
+
+    $( ".mobile-submenu-icon" ).click(function( event ) {
+      
+      console.log("arrow click123");
+
+      $('.category-list .active-page').toggleClass('visible').slideToggle();
+      
+      event.preventDefault();
+      
+    });
+
+
   }
 });
 
