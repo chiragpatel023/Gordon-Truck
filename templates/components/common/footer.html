@@ -60,8 +60,8 @@
 
         <section class="footer-info">
             <article class="footer-info-col footer-info-col--small-5" data-section-type="footer-webPages">
-                <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
-                <ul class="footer-info-list">
+                <h5 class="footer-info-heading">SHOP NOW</h5>
+                {{!-- <ul class="footer-info-list">
                     {{#each pages}}
                         <li>
                             <a href="{{url}}">{{name}}</a>
@@ -81,12 +81,13 @@
                     <li>
                         <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
                     </li>
-                </ul>
+                </ul> --}}
+                {{{region name="footer-link-1--global"}}}
             </article>
 
             <article class="footer-info-col footer-info-col--small-5 categories" data-section-type="footer-categories">
-              <h5 class="footer-info-heading">{{lang 'footer.categories'}}</h5>
-              <ul class="footer-info-list categories">
+              <h5 class="footer-info-heading">PRODUCTS</h5>
+              {{!-- <ul class="footer-info-list categories">
                   {{#each categories}}
                       <li>
                           <a href="{{url}}">{{name}}</a>
@@ -107,44 +108,48 @@
                       </i>
                     </a>
                   </div>
-              </ul>
+              </ul> --}}
+              {{{region name="footer-link-2--global"}}}
           </article>
           
 
             {{#and theme_settings.shop_by_brand_show_footer shop_by_brand.length}}
             <article class="footer-info-col footer-info-col--small-5" data-section-type="footer-brands">
-                <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
-                <ul class="footer-info-list">
+                <h5 class="footer-info-heading">HELP</h5>
+                {{!-- <ul class="footer-info-list">
                     {{#each shop_by_brand}}
                         <li>
                             <a href="{{url}}">{{name}}</a>
                         </li>
                     {{/each}}
                     <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                </ul>
+                </ul> --}}
+                {{{region name="footer-link-3--global"}}}
             </article>
             {{/and}}
             <article class="footer-info-col footer-info-col--small-5" data-section-type="footer-brands">
-              <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
-              <ul class="footer-info-list">
+              <h5 class="footer-info-heading">ABOUT US</h5>
+              {{!-- <ul class="footer-info-list">
                   {{#each shop_by_brand}}
                       <li>
                           <a href="{{url}}">{{name}}</a>
                       </li>
                   {{/each}}
                   <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-              </ul>
+              </ul> --}}
+              {{{region name="footer-link-4--global"}}}
           </article>
           <article class="footer-info-col footer-info-col--small-5" data-section-type="footer-brands">
-                <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
-                <ul class="footer-info-list">
+                <h5 class="footer-info-heading">SHOP BY BRANDS</h5>
+                {{!-- <ul class="footer-info-list">
                     {{#each shop_by_brand}}
                         <li>
                             <a href="{{url}}">{{name}}</a>
                         </li>
                     {{/each}}
                     <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                </ul>
+                </ul> --}}
+                {{{region name="footer-link-5--global"}}}
             </article>
             {{!-- #if theme_settings.show_social_icons '===' true}}
               <article class="footer-info-col footer-info-col--small-4" data-section-type="footer-webPages">
