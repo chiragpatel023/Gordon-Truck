@@ -1,8 +1,8 @@
 <div class="body" data-currency-code="{{currency_selector.active_currency_code}}">
     {{#block "hero"}} {{/block}}
-    <div class="container">
+    {{#if template '!=' 'pages/home'}}    <div class="container"> {{/if}}
         {{#block "page"}} {{/block}}
-    </div>
+        {{#if template '!=' 'pages/home'}} </div> {{/if}}
     {{> components/common/modal/modal}}
     {{> components/common/alert/alert-modal}}
 </div>
