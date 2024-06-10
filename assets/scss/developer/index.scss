@@ -59,6 +59,9 @@ $breakpoints: (
             display: flex;
             align-items: center;
             gap: 16px;
+            &:nth-child(2n){
+                justify-content: center;
+            }
             .block-content{
                 span{
                     color: #959595;
@@ -95,8 +98,13 @@ $breakpoints: (
             line-height: 24px;
             text-align: left;
         }
-        .footer-info-list{
+        .footer-info-list,.pbw-custom-menu{
             li{
+                padding: 0;
+                margin: 0;
+                &:hover{
+                    background-color: transparent;
+                }
                 a{
                     font-family: "Be Vietnam Pro", sans-serif;
                     text-transform: none;
@@ -147,4 +155,179 @@ $breakpoints: (
 
 #consent-manager-update-banner{
     display: none;
+}
+.main{
+    .newsletter-subscription-section{
+        border-top: none;
+        background-color: transparent;
+        background-image: url(https://cdn11.bigcommerce.com/s-c8rvhjr1gt/images/stencil/original/image-manager/contact.png);
+        border-radius: 5px;
+        padding: 40px 42px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .newsletter-subheading{
+            font-size: 12px;
+            color: #fff;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+        .newsletter-heading{
+            font-size: 32px;
+            color: #fff;
+            font-weight: 400;
+        }
+        .form{
+            background-color: #fff;
+            position: relative;
+            border-radius: 4px;
+            padding: 10px;
+            .button{
+                position: absolute;
+                right: 10px;
+                border-radius: 5px;
+            }
+            .form-input{
+                border: none;
+                font-size: 14px;
+                color: #757575;
+                font-family: "Be Vietnam Pro";
+            }
+        }
+    }
+}
+
+.featured-banners{
+    .f-banners{
+        display: flex;
+        gap: 0 20px;
+        .f-banner{
+            position: relative;
+            .banner-content{
+                position: absolute;
+                top: 50%;
+                left: 30px;
+                width: 70%;
+                transform: translateY(-50%);
+                .sub-heading{
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 17.78px;
+                    letter-spacing: 1.5px;
+                    text-transform: uppercase;
+                    text-align: left;
+                    color: #FFF;
+                    margin: 0 0 5px 0;
+                }
+                .heading{
+                    color: #FFF;
+                    text-shadow: 0px 0px 5px #000;
+                    font-family: Oswald;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 35px; /* 109.375% */
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    margin: 0 auto;
+                }
+                a{
+                    color: #FFF;
+                    font-family: Oswald;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 150%; /* 21px */
+                    text-decoration-line: underline;
+                    text-transform: uppercase;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.tailored-parts {
+    width: 100%;
+    position: relative;
+    img {
+        width: 100%;
+    }
+    .parts-content {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        .sub-heading{
+            color: #FFF;
+            font-family: Oswald;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            display: block;
+            text-align: center;
+        }
+        .parts-heading{
+            color: #FFF;
+            text-align: center;
+            font-family: Oswald;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 95%; /* 45.6px */
+            letter-spacing: -0.48px;
+            text-transform: uppercase;
+            margin: 5px auto 10px auto;
+            max-width: 70%;
+            display: block;
+        }
+        .parts-description{
+            color: #FFF;
+            text-align: center;
+            font-family: "Be Vietnam Pro";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 142.857% */
+            margin: 0 auto;
+            max-width: 80%;
+        }
+        .icon-lists {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 70%;
+            margin: 25px auto 0;
+            .icons-parts {
+                display: flex;
+                align-items: center;
+                gap: 0 10px;
+                .sub-content{
+                    h5{
+                        color: #FFF;
+                        font-family: Oswald;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                        margin: 3px auto;
+                    }
+                    span{
+                        color: #FFF;
+                        font-family: Oswald;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        letter-spacing: 0.5px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
 }
