@@ -5161,12 +5161,12 @@ stroke: stencilColor("sticky_nav_fontColor") !important;
 fill: stencilColor("sticky_nav_fontHoverColor") !important;
 stroke: stencilColor("sticky_nav_fontHoverColor") !important;
 }
-#menu.fixed .countPill {
+/*#menu.fixed .countPill {
 color: stencilColor("sticky_nav_fontColor") !important;
 }
 #menu.fixed svg.header-icon.search-icon {
 fill: stencilColor("sticky_nav_fontColor") !important;
-}
+} */
 #menu.fixed .search-icon.submit:hover svg.header-icon.search-icon {
 fill: stencilColor("sticky_nav_fontHoverColor") !important;
 }

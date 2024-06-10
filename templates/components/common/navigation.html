@@ -76,7 +76,11 @@
         <li class="navUser-action ">
             <a class="navBar-action" href="{{urls.account.wishlists.all}}">
                 <svg class="header-icon gift-icon"><use xlink:href="#icon-wishlist" /></svg>
-                <span class="wishlist_bubble">0</span>
+                {{#if settings.show_wishlist}}
+                    {{#if customer.num_wishlists ">" 0}}
+                        <span class="wishlist_bubble">{{json customer.num_wishlists}}</span>
+                    {{/if}}
+                {{/if}}
             </a>
         </li>
         
