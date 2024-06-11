@@ -683,11 +683,11 @@
         "max_purchase_quantity": "Maximum Purchase:",
         "min_purchase_quantity": "Minimum Purchase:",
         "related_products": "Related Products",
-        "top": "Most Popular",
+        "top": "Trending Products",
         "similar_by_views": "Customers Also Viewed",
         "featured": "Featured Products",
         "file_option_set": "Currently: <a href=\"{url}\" target=\"_blank\">{name}</a>",
-        "new": "New Products",
+        "new": "Latest Products",
         "warranty": "Warranty Information",
         "reviews": {
             "hide": "Hide Reviews",
