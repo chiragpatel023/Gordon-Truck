@@ -48,6 +48,50 @@ gql: 'query getBrands {
 <div class="container">
   <div class="main full homepage">
 
+    <ul class="categoryGrid productCarousel" data-product-type="categories"  data-slick='{
+      "dots": false,
+      "infinite": false,
+      "mobileFirst": false,
+      "slidesToShow": 10,
+      "slidesToScroll": 1,
+      "responsive": [
+      {
+        "breakpoint": 980,
+        "settings": {
+          "slidesToShow": 10,
+          "slidesToScroll": 1
+        }
+      },
+      {
+        "breakpoint": 800,
+        "settings": {
+          "slidesToShow": 10,
+          "slidesToScroll": 1
+        }
+      },
+        {
+          "breakpoint": 550,
+          "settings": {
+            "slidesToShow": 2,
+            "slidesToScroll": 1
+          }
+        }
+      ]
+  }'>
+      {{#each categories}}
+        <li class="productCat cat--{{id}}">
+              <div class="cat-img">
+                <a href="{{url}}">
+                    <img src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{image.alt}}">
+                </a>
+              </div>
+              <div class="cat-name">
+                <a href="{{url}}">{{name}}</a>
+              </div>
+        </li>
+      {{/each}}
+    </ul> 
+
 
     <!-- TOP SELLERS SECTION -->
     {{#if products.top_sellers}}
