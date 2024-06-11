@@ -1,5 +1,18 @@
 .homepage {
+    .featured-banners {
+        margin-bottom: 50px !important;
+    }
+    .shop-br-brands {
+        margin-bottom: 50px !important;
+    }
+    .tailored-parts {
+        margin-bottom: 50px !important;
+    }
+    .newsletter-subscription-section {
+        margin-bottom: 50px !important;
+    }
     .productCarousel {
+        margin-bottom: 50px;
         .slick-next {
             border-radius: 0 !important;
             background-color: #CCCCCC;
@@ -183,5 +196,62 @@
         font-weight: 600;
         text-transform: uppercase;
         margin-top: 15px;
+    }
+}
+[data-sub-layout="13f0de2d-ecc5-4f6a-a3b7-4e11b63caccb"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.banner-search-section {
+    margin-top: -28px;
+    .banner-image {
+        img {
+            width: 100%;
+        }
+        .mobile-image {
+            display: none !important;
+        }
+        @include responsive ("small") { 
+            .desktop-image {
+                display: none !important;
+            }
+            .mobile-image {
+                display: block !important;
+            }
+        }
+    }
+    .image-content {
+        left: 34%;
+        width: 50%;
+        text-align: left;
+        .section-subtitle {
+            color: #FFF;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+        .section-title {
+            color: #FFF;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 95%;
+            letter-spacing: -0.48px;
+            text-transform: uppercase;
+            margin-top: -12px;
+        }
+        .section-description {
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        .banner-button {
+            display: none;
+        }
     }
 }
