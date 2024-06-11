@@ -108,6 +108,25 @@
                     margin-top:1px;
                 }
             }
+            .img_count {
+                border-radius: 3px;
+                background: rgba(0, 0, 0, 0.40);
+                display: flex;
+                width: 34px;
+                height: 20px;
+                padding: 4px 5px;
+                justify-content: center;
+                align-items: center;
+                gap: 6px;
+                flex-shrink: 0;
+                color: #FFF;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 700;
+                bottom: 0;
+                position: absolute;
+                margin-left: 5px;
+            }
             @include responsive ("small") { 
                 figcaption.card-figcaption.mobile {
                     padding: 0 9px !important;
