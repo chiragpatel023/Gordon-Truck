@@ -10,7 +10,23 @@ carousel: {{theme_settings.homepage_show_carousel}}
 blog:
     recent_posts:
         limit: {{theme_settings.homepage_blog_posts_count}}
+gql: 'query getBrands {
+  site {
+    brands {
+      edges {
+        node {
+          defaultImage {
+            urlOriginal
+          }
+          name
+          path
+        }
+      }
+    }
+  }
+}'
 ---
+
 {{#partial "hero"}}
 {{{region name="home_below_menu"}}}
     {{#if carousel}}
@@ -52,10 +68,40 @@ blog:
         <h3 class="section-title">Shop by Brand</h3>
         <a href="/brands" class="shop-all">Shop All</a>
       </div>
-      <div class="brand-list">{{json shop_by_brand}}
-        {{#each shop_by_brand}} 
+      <div class="brand-list" data-slick='{
+        "dots": false,
+        "infinite": false,
+        "mobileFirst": false,
+        "slidesToShow": 6,
+        "slidesToScroll": 3,
+        "responsive": [
+        {
+          "breakpoint": 980,
+          "settings": {
+            "slidesToShow": 4,
+            "slidesToScroll": 4
+          }
+        },
+        {
+          "breakpoint": 800,
+          "settings": {
+            "slidesToShow": 3,
+            "slidesToScroll": 3
+          }
+        },
+          {
+    	      "breakpoint": 550,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2
+            }
+          }
+        ]
+    }'>
+        {{#each gql.data.site.brands.edges}} 
+        
             <div class="list-brand">
-                <a href="{{url}}"></a>
+                <a href="{{path}}"><img src="{{node.defaultImage.urlOriginal}}"></a>
             </div>
         {{/each}}
       </div>
