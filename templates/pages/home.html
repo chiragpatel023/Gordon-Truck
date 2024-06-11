@@ -80,7 +80,7 @@ gql: 'query getBrands {
         <h3 class="section-title">Shop by Brand</h3>
         <a href="/brands" class="shop-all">Shop All</a>
       </div>
-      <div class="brand-list" data-slick='{
+      <div class="productCarousel brand-list" data-slick='{
         "dots": false,
         "infinite": false,
         "mobileFirst": false,
@@ -210,7 +210,36 @@ gql: 'query getBrands {
 
   <div class="blog-section">
     <h2 class="page-heading showcase-products">Latest News and Events  <a class="shop-all-link" href="/blog">Shop All</a></h2>
-    <ul>
+    <ul class="productCarousel" data-slick='{
+      "dots": false,
+      "infinite": false,
+      "mobileFirst": false,
+      "slidesToShow": 3,
+      "slidesToScroll": 1,
+      "responsive": [
+      {
+        "breakpoint": 980,
+        "settings": {
+          "slidesToShow": 3,
+          "slidesToScroll": 1
+        }
+      },
+      {
+        "breakpoint": 800,
+        "settings": {
+          "slidesToShow": 3,
+          "slidesToScroll": 1
+        }
+      },
+        {
+          "breakpoint": 550,
+          "settings": {
+            "slidesToShow": 2,
+            "slidesToScroll": 1
+          }
+        }
+      ]
+  }'>
       {{#each blog.recent_posts}}
         <li class="blog-sidebar-item">
           <a href="{{url}}">
