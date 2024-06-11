@@ -144,14 +144,13 @@ gql: 'query getBrands {
   <!-- END NEW PRODUCTS SECTION -->
 
   <div class="blog-section">
-    <h2 class="blog-sidebar-heading">Latest News and Events </h2>
-    <!--{{json blog}}-->
+    <h2 class="page-heading showcase-products">Latest News and Events  <a class="shop-all-link" href="/blog">Shop All</a></h2>
     <ul>
       {{#each blog.recent_posts}}
         <li class="blog-sidebar-item">
           <a href="{{url}}">
             <div class="blog_img">
-              <img src="{{cdn 'assets/img/placeholder.png'}}" />
+              <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage thumbnail 'blog_size'}}" alt="{{post.thumbnail.alt}}" title="{{post.thumbnail.alt}}">
             </div>
             <div class="blog_title">
               <span class="blog-sidebar-link-title">{{title}}</span>
