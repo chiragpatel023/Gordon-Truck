@@ -1,5 +1,67 @@
 .homepage {
+    .featured-banners {
+        margin-bottom: 50px !important;
+    }
+    .shop-br-brands {
+        margin-bottom: 50px !important;
+        .slick-next {
+            top: 51px !important;
+        }
+        .slick-prev {
+            top: 51px !important;
+        }
+    }
+    .tailored-parts {
+        margin-bottom: 50px !important;
+    }
+    .newsletter-subscription-section {
+        margin-bottom: 50px !important;
+    }
+    .categoryGrid {
+        margin-top: 60px;
+        .slick-next {
+            right: -28px !important;
+        }
+        .slick-prev {
+            left: -32px !important;
+        }
+        li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .cat-img {
+            text-align: center;
+            img {
+                width: 113px;
+                height: 113px;
+                flex-shrink: 0;
+            }
+            img:hover {
+                border-radius: 113px;
+                border: 2px solid #48A9C5;
+                background: url(<path-to-image>) lightgray 11.014px 9.485px / 76.654% 76.654% no-repeat, #FFF;
+            }
+        }
+        .cat-name {
+            text-align: center;
+            margin-top: 10px;
+            a {
+                color: #000;
+                text-align: center;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%; 
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            a:hover {
+                color: #48A9C5;
+            }
+        }
+    }
     .productCarousel {
+        margin-bottom: 50px;
         .slick-next {
             border-radius: 0 !important;
             background-color: #CCCCCC;
@@ -45,6 +107,25 @@
                 @include responsive ("small") { 
                     margin-top:1px;
                 }
+            }
+            .img_count {
+                border-radius: 3px;
+                background: rgba(0, 0, 0, 0.40);
+                display: flex;
+                width: 34px;
+                height: 20px;
+                padding: 4px 5px;
+                justify-content: center;
+                align-items: center;
+                gap: 6px;
+                flex-shrink: 0;
+                color: #FFF;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 700;
+                bottom: 0;
+                position: absolute;
+                margin-left: 5px;
             }
             @include responsive ("small") { 
                 figcaption.card-figcaption.mobile {
@@ -183,5 +264,62 @@
         font-weight: 600;
         text-transform: uppercase;
         margin-top: 15px;
+    }
+}
+[data-sub-layout="13f0de2d-ecc5-4f6a-a3b7-4e11b63caccb"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.banner-search-section {
+    margin-top: -28px;
+    .banner-image {
+        img {
+            width: 100%;
+        }
+        .mobile-image {
+            display: none !important;
+        }
+        @include responsive ("small") { 
+            .desktop-image {
+                display: none !important;
+            }
+            .mobile-image {
+                display: block !important;
+            }
+        }
+    }
+    .image-content {
+        left: 34%;
+        width: 50%;
+        text-align: left;
+        .section-subtitle {
+            color: #FFF;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+        .section-title {
+            color: #FFF;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 95%;
+            letter-spacing: -0.48px;
+            text-transform: uppercase;
+            margin-top: -12px;
+        }
+        .section-description {
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        .banner-button {
+            display: none;
+        }
     }
 }

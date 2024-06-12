@@ -40,8 +40,64 @@ gql: 'query getBrands {
   {{#each shipping_messages}}
     {{> components/common/alert/alert-info message}}
   {{/each}}
+
+<div class="home_top">
+    {{{region name="home_top"}}}
+</div>
+
 <div class="container">
   <div class="main full homepage">
+
+    <ul class="categoryGrid productCarousel" data-product-type="categories"  data-slick='{
+      "dots": false,
+      "infinite": false,
+      "mobileFirst": false,
+      "slidesToShow": 10,
+      "slidesToScroll": 1,
+      "responsive": [
+      {
+        "breakpoint": 980,
+        "settings": {
+          "slidesToShow": 10,
+          "slidesToScroll": 1
+        }
+      },
+      {
+        "breakpoint": 800,
+        "settings": {
+          "slidesToShow": 10,
+          "slidesToScroll": 1
+        }
+      },
+        {
+          "breakpoint": 550,
+          "settings": {
+            "slidesToShow": 2,
+            "slidesToScroll": 1
+          }
+        }
+      ]
+  }'>
+      {{#each categories}}
+        <li class="productCat cat--{{id}}">
+              <div class="cat-img">
+                <a href="{{url}}">
+                    <img src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{image.alt}}">
+                </a>
+              </div>
+              <div class="cat-name">
+                <a href="{{url}}">{{name}}</a>
+              </div>
+        </li>
+      {{/each}}
+    </ul> 
+
+
+    <!-- TOP SELLERS SECTION -->
+    {{#if products.top_sellers}}
+        {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+    {{/if}}
+    
     <div class="featured-banners">
       <div class="f-banners">
         <div class="f-banner">
@@ -68,7 +124,7 @@ gql: 'query getBrands {
         <h3 class="section-title">Shop by Brand</h3>
         <a href="/brands" class="shop-all">Shop All</a>
       </div>
-      <div class="brand-list" data-slick='{
+      <div class="productCarousel brand-list" data-slick='{
         "dots": false,
         "infinite": false,
         "mobileFirst": false,
@@ -106,6 +162,60 @@ gql: 'query getBrands {
         {{/each}}
       </div>
     </div>
+
+
+    <div class="tailored-parts">
+      <img src="https://cdn11.bigcommerce.com/s-c8rvhjr1gt/images/stencil/original/image-manager/tailored.png">
+      <div class="parts-content">
+        <div class="container">
+          <span class="sub-heading">Catering to All Major Truck Brands</span>
+          <h3 class="parts-heading">Tailored Parts & Accessories for Every Make and Model</h3>
+          <p class="parts-description">Discover a vast selection of top-quality parts and accessories meticulously curated to fit seamlessly with every make and model. From Freightliner to Volvo and beyond, our inventory ensures that you'll find the perfect match for your trucking needs. Elevate performance, style, and efficiency with our tailored solutions designed to keep your fleet running smoothly</p>
+          <div class="icon-lists">
+            <div class="icons-parts">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 30" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66667 3.33333C1.66667 1.49238 3.15905 0 5 0H23.3333C25.1743 0 26.6667 1.49238 26.6667 3.33333V5H31.6667C35.3485 5 38.3333 7.98477 38.3333 11.6667V13.3333V18.3333V21.6667C39.2538 21.6667 40 22.4128 40 23.3333C40 24.2538 39.2538 25 38.3333 25H36.6667H31.5833C31.638 25.2693 31.6667 25.548 31.6667 25.8333C31.6667 28.1345 29.8012 30 27.5 30C25.1988 30 23.3333 28.1345 23.3333 25.8333C23.3333 25.548 23.362 25.2693 23.4167 25H13.25C13.3046 25.2693 13.3333 25.548 13.3333 25.8333C13.3333 28.1345 11.4678 30 9.16667 30C6.86548 30 5 28.1345 5 25.8333C5 25.548 5.0287 25.2693 5.08335 25H3.33333H1.66667C0.746192 25 0 24.2538 0 23.3333C0 22.4128 0.746192 21.6667 1.66667 21.6667V3.33333ZM27.5 25C27.0398 25 26.6667 25.3732 26.6667 25.8333C26.6667 26.2935 27.0398 26.6667 27.5 26.6667C27.9602 26.6667 28.3333 26.2935 28.3333 25.8333C28.3333 25.3732 27.9602 25 27.5 25ZM27.5 21.6667H35V18.3333V15H31.6667C30.7462 15 30 14.2538 30 13.3333C30 12.4128 30.7462 11.6667 31.6667 11.6667H35C35 9.82572 33.5077 8.33333 31.6667 8.33333H26.6667V21.6667H27.5ZM23.3333 21.6667H9.16667H5V3.33333H23.3333V6.66667V21.6667ZM8.33333 25.8333C8.33333 25.3732 8.70643 25 9.16667 25C9.6269 25 10 25.3732 10 25.8333C10 26.2935 9.6269 26.6667 9.16667 26.6667C8.70643 26.6667 8.33333 26.2935 8.33333 25.8333Z" fill="white"/>
+              </svg>
+              <div class="sub-content">
+                <h5>SHOP 15+ BRANDS</h5>
+                <span>EXPLORE YOUR favourite BRANDS</span>
+              </div>
+            </div>
+    
+            <div class="icons-parts">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                <path d="M31.9994 16.3457C32.1409 19.592 31.2245 22.7964 29.3881 25.477C27.5516 28.1577 24.8945 30.1695 21.8162 31.21C18.738 32.2505 15.4051 32.2633 12.3189 31.2466C9.23273 30.2298 6.56013 28.2385 4.70312 25.5721" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                <path d="M2.00335 17.3665C1.98096 16.2966 2.07078 15.2274 2.27134 14.1762C2.82538 11.2864 4.21705 8.62342 6.27313 6.5186C8.32921 4.41378 10.9589 2.96012 13.8349 2.33854C16.7109 1.71696 19.7062 1.95491 22.448 3.02279C25.1898 4.09066 27.5569 5.94129 29.2549 8.34434" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                <path d="M22.5078 7.7066L29.4308 8.51694L30.1199 2.02148" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                <path d="M11.3113 26.0384L4.3947 25.228L3.69922 31.7235" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                <path d="M21.487 12.7918C21.132 11.9655 20.5387 11.2637 19.7829 10.7761C19.0271 10.2885 18.1431 10.0373 17.2439 10.0545C13.4155 10.0545 13.2815 12.7918 13.2815 12.7918C13.2815 12.7918 12.7073 16.1608 17.3843 16.5245C22.2399 16.8945 21.487 20.2507 21.487 20.2507C21.487 20.2507 20.9893 23.1731 17.3843 23.3581C13.7792 23.5431 12.6562 19.7531 12.6562 19.7531" stroke="white" stroke-width="3"/>
+                <path d="M17.2344 7.62891V26.1582" stroke="white" stroke-width="3"/>
+              </svg>
+              <div class="sub-content">
+                <h5>EASY RETURNS</h5>
+                <span>BUY WITH CONFIDENCE</span>
+              </div>
+            </div>
+    
+            <div class="icons-parts">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" viewBox="0 0 25 30" fill="none">
+                <path d="M24.5455 13.6364C24.5455 21.2045 19.3091 28.2818 12.2727 30C5.23636 28.2818 0 21.2045 0 13.6364V5.45455L12.2727 0L24.5455 5.45455V13.6364ZM12.2727 27.2727C17.3864 25.9091 21.8182 19.8273 21.8182 13.9364V7.22727L12.2727 2.97273L2.72727 7.22727V13.9364C2.72727 19.8273 7.15909 25.9091 12.2727 27.2727ZM10.5 20L6.5 17L8 15.5L10.5 17L17.5 10.9091L19 12.5" fill="white"/>
+              </svg>
+              <div class="sub-content">
+                <h5>HELP FROM EXPERTS</h5>
+                <span>REACH OUT TO US NOW</span>
+              </div>
+            </div>
+    
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
     <!-- FEATURED PRODUCTS SECTION -->
       {{#if products.featured}}
           {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
@@ -113,27 +223,16 @@ gql: 'query getBrands {
       {{{region name="home_below_featured_products"}}}
 
 
-    <!-- TOP SELLERS SECTION -->
-      {{#if products.top_sellers}}
-          {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
-      {{/if}}
+    
       {{{region name="home_below_top_products"}}}
 
-      <div class="newsletter-subscription-section">
-        <article class="newsletter cta" data-section-type="newsletterSubscription">
-          {{#if settings.show_newsletter_box}}
-              {{> components/common/subscription-form}}
-          {{/if}}
-          <div class="clear"></div>
-        </article>
-      </div>
-    <!-- NEW PRODUCTS SECTION -->
+
+      <!-- NEW PRODUCTS SECTION -->
       {{#if products.new}}
-          {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+      {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
       {{/if}}
       {{{region name="home_below_new_products"}}}
-    <!-- END NEW PRODUCTS SECTION -->
-  
+      <!-- END NEW PRODUCTS SECTION -->
 
 
   <!-- NEW PRODUCTS SECTION -->
@@ -143,9 +242,48 @@ gql: 'query getBrands {
     {{{region name="home_below_new_products"}}}
   <!-- END NEW PRODUCTS SECTION -->
 
+
+  <div class="newsletter-subscription-section">
+    <article class="newsletter cta" data-section-type="newsletterSubscription">
+      {{#if settings.show_newsletter_box}}
+          {{> components/common/subscription-form}}
+      {{/if}}
+      <div class="clear"></div>
+    </article>
+  </div>
+
   <div class="blog-section">
     <h2 class="page-heading showcase-products">Latest News and Events  <a class="shop-all-link" href="/blog">Shop All</a></h2>
-    <ul>
+    <ul class="productCarousel" data-slick='{
+      "dots": false,
+      "infinite": false,
+      "mobileFirst": false,
+      "slidesToShow": 3,
+      "slidesToScroll": 1,
+      "responsive": [
+      {
+        "breakpoint": 980,
+        "settings": {
+          "slidesToShow": 3,
+          "slidesToScroll": 1
+        }
+      },
+      {
+        "breakpoint": 800,
+        "settings": {
+          "slidesToShow": 3,
+          "slidesToScroll": 1
+        }
+      },
+        {
+          "breakpoint": 550,
+          "settings": {
+            "slidesToShow": 2,
+            "slidesToScroll": 1
+          }
+        }
+      ]
+  }'>
       {{#each blog.recent_posts}}
         <li class="blog-sidebar-item">
           <a href="{{url}}">
@@ -171,53 +309,5 @@ gql: 'query getBrands {
 </div>
 </div>
 
-<div class="tailored-parts">
-  <img src="https://cdn11.bigcommerce.com/s-c8rvhjr1gt/images/stencil/original/image-manager/tailored.png">
-  <div class="parts-content">
-    <div class="container">
-      <span class="sub-heading">Catering to All Major Truck Brands</span>
-      <h3 class="parts-heading">Tailored Parts & Accessories for Every Make and Model</h3>
-      <p class="parts-description">Discover a vast selection of top-quality parts and accessories meticulously curated to fit seamlessly with every make and model. From Freightliner to Volvo and beyond, our inventory ensures that you'll find the perfect match for your trucking needs. Elevate performance, style, and efficiency with our tailored solutions designed to keep your fleet running smoothly</p>
-      <div class="icon-lists">
-        <div class="icons-parts">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 30" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66667 3.33333C1.66667 1.49238 3.15905 0 5 0H23.3333C25.1743 0 26.6667 1.49238 26.6667 3.33333V5H31.6667C35.3485 5 38.3333 7.98477 38.3333 11.6667V13.3333V18.3333V21.6667C39.2538 21.6667 40 22.4128 40 23.3333C40 24.2538 39.2538 25 38.3333 25H36.6667H31.5833C31.638 25.2693 31.6667 25.548 31.6667 25.8333C31.6667 28.1345 29.8012 30 27.5 30C25.1988 30 23.3333 28.1345 23.3333 25.8333C23.3333 25.548 23.362 25.2693 23.4167 25H13.25C13.3046 25.2693 13.3333 25.548 13.3333 25.8333C13.3333 28.1345 11.4678 30 9.16667 30C6.86548 30 5 28.1345 5 25.8333C5 25.548 5.0287 25.2693 5.08335 25H3.33333H1.66667C0.746192 25 0 24.2538 0 23.3333C0 22.4128 0.746192 21.6667 1.66667 21.6667V3.33333ZM27.5 25C27.0398 25 26.6667 25.3732 26.6667 25.8333C26.6667 26.2935 27.0398 26.6667 27.5 26.6667C27.9602 26.6667 28.3333 26.2935 28.3333 25.8333C28.3333 25.3732 27.9602 25 27.5 25ZM27.5 21.6667H35V18.3333V15H31.6667C30.7462 15 30 14.2538 30 13.3333C30 12.4128 30.7462 11.6667 31.6667 11.6667H35C35 9.82572 33.5077 8.33333 31.6667 8.33333H26.6667V21.6667H27.5ZM23.3333 21.6667H9.16667H5V3.33333H23.3333V6.66667V21.6667ZM8.33333 25.8333C8.33333 25.3732 8.70643 25 9.16667 25C9.6269 25 10 25.3732 10 25.8333C10 26.2935 9.6269 26.6667 9.16667 26.6667C8.70643 26.6667 8.33333 26.2935 8.33333 25.8333Z" fill="white"/>
-          </svg>
-          <div class="sub-content">
-            <h5>SHOP 15+ BRANDS</h5>
-            <span>EXPLORE YOUR favourite BRANDS</span>
-          </div>
-        </div>
-
-        <div class="icons-parts">
-          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-            <path d="M31.9994 16.3457C32.1409 19.592 31.2245 22.7964 29.3881 25.477C27.5516 28.1577 24.8945 30.1695 21.8162 31.21C18.738 32.2505 15.4051 32.2633 12.3189 31.2466C9.23273 30.2298 6.56013 28.2385 4.70312 25.5721" stroke="white" stroke-width="3" stroke-linecap="round"/>
-            <path d="M2.00335 17.3665C1.98096 16.2966 2.07078 15.2274 2.27134 14.1762C2.82538 11.2864 4.21705 8.62342 6.27313 6.5186C8.32921 4.41378 10.9589 2.96012 13.8349 2.33854C16.7109 1.71696 19.7062 1.95491 22.448 3.02279C25.1898 4.09066 27.5569 5.94129 29.2549 8.34434" stroke="white" stroke-width="3" stroke-linecap="round"/>
-            <path d="M22.5078 7.7066L29.4308 8.51694L30.1199 2.02148" stroke="white" stroke-width="3" stroke-linecap="round"/>
-            <path d="M11.3113 26.0384L4.3947 25.228L3.69922 31.7235" stroke="white" stroke-width="3" stroke-linecap="round"/>
-            <path d="M21.487 12.7918C21.132 11.9655 20.5387 11.2637 19.7829 10.7761C19.0271 10.2885 18.1431 10.0373 17.2439 10.0545C13.4155 10.0545 13.2815 12.7918 13.2815 12.7918C13.2815 12.7918 12.7073 16.1608 17.3843 16.5245C22.2399 16.8945 21.487 20.2507 21.487 20.2507C21.487 20.2507 20.9893 23.1731 17.3843 23.3581C13.7792 23.5431 12.6562 19.7531 12.6562 19.7531" stroke="white" stroke-width="3"/>
-            <path d="M17.2344 7.62891V26.1582" stroke="white" stroke-width="3"/>
-          </svg>
-          <div class="sub-content">
-            <h5>EASY RETURNS</h5>
-            <span>BUY WITH CONFIDENCE</span>
-          </div>
-        </div>
-
-        <div class="icons-parts">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" viewBox="0 0 25 30" fill="none">
-            <path d="M24.5455 13.6364C24.5455 21.2045 19.3091 28.2818 12.2727 30C5.23636 28.2818 0 21.2045 0 13.6364V5.45455L12.2727 0L24.5455 5.45455V13.6364ZM12.2727 27.2727C17.3864 25.9091 21.8182 19.8273 21.8182 13.9364V7.22727L12.2727 2.97273L2.72727 7.22727V13.9364C2.72727 19.8273 7.15909 25.9091 12.2727 27.2727ZM10.5 20L6.5 17L8 15.5L10.5 17L17.5 10.9091L19 12.5" fill="white"/>
-          </svg>
-          <div class="sub-content">
-            <h5>HELP FROM EXPERTS</h5>
-            <span>REACH OUT TO US NOW</span>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-</div>
 {{/partial}}
 {{> layout/home}}
