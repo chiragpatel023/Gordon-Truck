@@ -1,5 +1,6 @@
 // PASTE CUSTOM STYLING HERE
 body {font-family: "Oswald", sans-serif;}
+#mask {width: 100%;}
 .header{
     background-color: #000000;
     #account-dropdown-signin-list {
@@ -32,6 +33,21 @@ body {font-family: "Oswald", sans-serif;}
             font-size: 12px;
         }
     }
+    .mega-cat-nav .container-header.btn.active .burger-menu-arrow {
+        display: none;
+    }
+    .mega-cat-nav.active .container-header.btn.active {
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        width: 248px;
+        left: 0;
+    }
+    .mega-cat-dropdown {
+        position: fixed;
+        left: 0;
+        top: -11px;
+    } 
     @include responsive ("small") {
         height: 92px !important;
         color: #000000;
@@ -327,6 +343,9 @@ body {font-family: "Oswald", sans-serif;}
         }
     }
     .fixed {
+        .mega-cat-dropdown { 
+            margin-top: 0 !important;
+        }
         @include responsive ("small") {
             .user-icons {
                 margin-left: 0 !important;
@@ -361,8 +380,5 @@ body {font-family: "Oswald", sans-serif;}
         .search-icon.submit {
             top: 0;
         }
-    }
-    .mega-cat-nav .container-header.btn.active .burger-menu-arrow {
-        display: none;
     }
 }
