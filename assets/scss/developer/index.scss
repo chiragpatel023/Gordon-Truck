@@ -51,12 +51,14 @@ $breakpoints: (
         padding: 40px 0;
         justify-content: center;
         align-items: center;
-        border-bottom: 1px solid #5A5A5A;
+        border-bottom: 1px solid #2f2f2b;
         margin-bottom: 60px;
         display: flex;
         @include responsive ("small") { 
             display: block;
             width: 100%;
+            margin-bottom: 20px;
+            padding-bottom: 28px;
         }
         .store-col-3 {
             width: 33.33%;
@@ -98,6 +100,9 @@ $breakpoints: (
             }
         }
     }
+    article {
+        padding: 0;
+    }
     .footer-info-col{
         margin-bottom: 0;
         &.footer-info-col--small-5{
@@ -113,6 +118,44 @@ $breakpoints: (
             font-weight: 500;
             line-height: 24px;
             text-align: left;
+            @include responsive ("small") { 
+                border-bottom: 0.5px solid #2f2f2b;
+                padding: 10px;
+                margin: 0;
+            }
+        }
+        .arrow {
+            border: solid #ffffff;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            float: right;
+            margin-top: 8px;
+        }
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        @include responsive ("small") { 
+            ul {
+                text-align: left;
+                padding: 0 10px;
+            }
+            .visible {
+                display: block !important;
+            }
         }
         .footer-info-list,.pbw-custom-menu{
             li{
@@ -153,6 +196,9 @@ $breakpoints: (
                 justify-content: center;
                 align-items: center;
                 padding: 45px 0;
+                @include responsive ("small") { 
+                    padding: 10px 0;
+                }
                 .socialLinks-item{
                     padding: 0;
                     .icon{
