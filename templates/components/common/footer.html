@@ -1174,14 +1174,25 @@ $(document).ready(function() {
     });
 
     $( ".mobile-submenu-icon" ).click(function( event ) {
-      
-      console.log("arrow click123");
-
       $('.category-list .active-page').toggleClass('visible').slideToggle();
-      
       event.preventDefault();
-      
     });
+
+    //Mobile Footer Menu
+    if ($(window).width() < 801) { 
+      console.log('footer');
+      $('.footer-info-heading').append('<i class="arrow down"></i>');
+      $('.footer-info-heading').next('div').css('display','none');
+      $('article .footer-info-list').css('display','none');
+      
+      $( ".footer-info-heading" ).click(function( event ) {
+        $(this).next('div').toggleClass('visible');
+        $(this).next('ul').toggleClass('visible');
+        event.preventDefault();
+      });
+
+    };
+    
 
 
   }

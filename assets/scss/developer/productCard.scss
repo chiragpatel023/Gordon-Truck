@@ -1,23 +1,8 @@
 .homepage {
-    .featured-banners {
-        margin-bottom: 50px !important;
-    }
-    .shop-br-brands {
-        margin-bottom: 50px !important;
-        .slick-next {
-            top: 51px !important;
-        }
-        .slick-prev {
-            top: 51px !important;
-        }
-    }
-    .tailored-parts {
-        margin-bottom: 50px !important;
-    }
-    .newsletter-subscription-section {
-        margin-bottom: 50px !important;
-    }
     .categoryGrid {
+        .slick-list {
+            border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+        }
         margin-top: 60px;
         .slick-next {
             right: -28px !important;
@@ -28,23 +13,37 @@
         li {
             display: inline-block;
             margin-right: 15px;
+            @include responsive ("small") { 
+                margin-right: 0;
+            }
+        }
+        li:hover {
+            border-bottom: 4px solid #48A9C5;
+        }
+        li:hover img {
+            border-radius: 113px;
+            border: 2px solid #48A9C5;
+            background: url(<path-to-image>) lightgray 11.014px 9.485px / 76.654% 76.654% no-repeat, #FFF;
         }
         .cat-img {
-            text-align: center;
+            text-align: -webkit-center;
             img {
                 width: 113px;
                 height: 113px;
                 flex-shrink: 0;
-            }
-            img:hover {
-                border-radius: 113px;
-                border: 2px solid #48A9C5;
-                background: url(<path-to-image>) lightgray 11.014px 9.485px / 76.654% 76.654% no-repeat, #FFF;
+                @include responsive ("small") { 
+                    width: 58px;
+                    height: 58px;
+                }
             }
         }
         .cat-name {
             text-align: center;
             margin-top: 10px;
+            margin-bottom: 30px;
+            @include responsive ("small") { 
+                margin-bottom: 12px;
+            }
             a {
                 color: #000;
                 text-align: center;
@@ -71,6 +70,10 @@
         }
         .slick-next::before {
             right: 8px;
+            @include responsive ("small") { 
+                right: 3px;
+                top: 0;
+            }
         }
         .slick-prev {
             border-radius: 0 !important;
@@ -142,6 +145,9 @@
                 font-size: 16px;
                 font-weight: 500;
                 height: 75px;
+                @include responsive ("small") {
+                    font-size: 14px;
+                }
             }
             .brand_name {
                 color: #757575;
@@ -207,6 +213,11 @@
         }
     }
     .blog-section {
+        @include responsive ("small") {
+            .productCarousel .slick-next::before {
+                right: 6px;
+            }
+        }
         a {
             text-decoration: none;
         }
@@ -257,6 +268,9 @@
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 22px !important;
+        @include responsive ("small") { 
+            font-size: 20px;
+        }
     }
     .shop-all-link {
         float: right;
@@ -264,6 +278,9 @@
         font-weight: 600;
         text-transform: uppercase;
         margin-top: 15px;
+        @include responsive ("small") { 
+            margin-top: 5px;
+        }
     }
 }
 [data-sub-layout="13f0de2d-ecc5-4f6a-a3b7-4e11b63caccb"] {
@@ -310,6 +327,9 @@
             letter-spacing: -0.48px;
             text-transform: uppercase;
             margin-top: -12px;
+            @include responsive ("small") {
+            font-size: 20px;
+            }
         }
         .section-description {
             color: #FFF;
