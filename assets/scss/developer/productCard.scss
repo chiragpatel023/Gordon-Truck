@@ -328,7 +328,8 @@
             text-transform: uppercase;
             margin-top: -12px;
             @include responsive ("small") {
-            font-size: 20px;
+                font-size: 20px;
+                line-height: 25px;
             }
         }
         .section-description {
