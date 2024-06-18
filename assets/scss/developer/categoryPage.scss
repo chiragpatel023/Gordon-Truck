@@ -1,0 +1,87 @@
+.category-page {
+    .productGrid {
+        margin-bottom: 0;
+    }
+    .cat-page-page-heading {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 95%;
+        letter-spacing: -0.32px;
+        text-transform: uppercase !important;
+        margin: 22px 0;
+    }
+    .actionBar {
+        .actionBar-section {
+            float: right;
+            .form-field {
+                border-radius: 3px !important;
+                border: 1px solid #ECECED;
+                padding: 5px;
+            }
+        }
+        .filter_toggle {
+            float: left;
+            border: 1px solid #48A9C5;
+            background: rgba(72, 169, 197, 0.09);
+            border-radius: 3px;
+            padding: 12px 20px 5px 15px;
+            .filter_label {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                color: #48A9C5;
+                text-decoration: none;
+            }
+            svg {
+                top: 10px !important;
+            }
+            span {
+                float: right;
+                margin-top: -2px;
+                margin-left: 8px;
+            }
+        }
+    }
+    .pagination-list {
+        float: right;
+        margin-bottom: 0;
+        li {
+            margin-left: 0;
+            margin-right: 0;
+            stroke-width: 1px;
+            stroke: #DEE2E7;
+            a {
+                padding: 8px 14px;
+            }
+        }
+        li:hover {
+            border: 2px solid #48A9C5; ;
+        }
+        .pagination-item--next {
+            float: unset;
+            padding: 5px 5px 2px 5px;
+            border-radius: 0px 5px 5px 0px;
+            svg {
+                fill: #000000;
+            }
+        }
+        .pagination-item--previous {
+            float: left;
+            padding: 5px 5px 0px 5px;
+            border-radius: 5px 0px 0px 5px;
+            svg {
+                fill: #000000;
+                margin-top: -2px;
+            }
+        }
+        .pagination-item--current {
+            background: #48A9C5;
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+    
+}

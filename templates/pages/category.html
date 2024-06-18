@@ -14,9 +14,18 @@ category:
     {{/if}}
 {{/partial}}
 
+
+
 {{#partial "page"}}
 
+<div class="category-page">
+
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<h1 class="page-heading showcase-products cat-page-page-heading">{{category.name}}</h1>
+{{{region name="category_below_header"}}}
+{{{category.description}}}
+
 {{#if category.image}}
 <div class="category-main-image">
     {{> components/common/responsive-img
@@ -45,9 +54,7 @@ category:
     {{/if}}
 
     <main class="page-content" id="product-listing-container">
-      <h1 class="page-heading">{{category.name}}</h1>
-      {{{region name="category_below_header"}}}
-      {{{category.description}}}
+      
       <!--LONE STAR CUSTOM SUBCATEGORY GRID-->
       
       {{#if category.subcategories}}
@@ -82,6 +89,8 @@ category:
         <a class="navUser-action navUser-item--compare bottom" href="{{urls.compare}}" data-compare-nav>{{lang 'Compare Selected'}}<span class="countPill countPill--positive countPill--alt compare"></span></a>
 
 </div>
-
+</div>
 {{/partial}}
 {{> layout/base}}
+
+
