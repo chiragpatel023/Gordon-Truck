@@ -541,7 +541,7 @@
         "alert-color": "#333333",
         "alert-color-alt": "#ffffff",
         "storeName-color": "#333333",
-        "body-bg": "#ffffff",
+        "body-bg": "#F8F8F8",
         "header-backgroundColor": "#ffffff",
         "footer-backgroundColor": "#1f1f1f",
         "newsletter-backgroundColor": "#ebebeb",
