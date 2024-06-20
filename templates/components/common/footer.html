@@ -1623,5 +1623,24 @@ window.addEventListener("resize", function() {
 <script type="text/javascript">
   $(document).ready(function(){
     $('.flyout.page.eight-per-page:first-child:last-child').parents('.desktop').siblings('.category-title').find('.flyout-pagination-container.top.visible').removeClass('visible');
+  
+  
+    // Category page filter
+    /*$('.category-page .category .accordion-block').each(function(i, obj) {
+        if (i != 0) {
+          $(this).find(".accordion-nav-clear-holder .accordion-navigation").removeClass("is-open");
+          $(this).find(".accordion-nav-clear-holder .accordion-navigation").attr("aria-expanded","false");
+          $(this).find(".accordion-nav-clear-holder .accordion-content").removeClass("is-open");
+          $(this).find(".accordion-nav-clear-holder .accordion-content").attr("aria-hidden","false");
+          $(this).find(".accordion-content ul").removeClass("navList::before");
+        }
+    });*/
+    
+    $( ".filter_label" ).click(function( e ) {
+        $(".category-page .category").toggleClass("category_full_width");
+        $(".filter_label_text").html('Show Filters');
+        e.preventDefault();
+    });
+  
   });
 </script>
