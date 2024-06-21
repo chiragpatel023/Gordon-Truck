@@ -126,8 +126,21 @@
     }
     .page-sidebar {
         margin-top: 26px;
+        .facetedSearch-navList {
+            margin-top: 0;
+        }
+        .facetedSearch-refineFilters {
+            background: #fff;
+            padding: 15px 10px 2px 10px;
+        }
         .sidebarBlock {
-            padding: 15px;
+            .navList-action--checkbox::before {
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+                border-radius: 3px;
+                border: 1.5px solid rgba(117, 117, 117, 0.50);
+            }
             h5 {
                 color: #000;
                 font-size: 14px;
@@ -141,8 +154,12 @@
             }
             .accordion-block {
                 background: #fff;
-                padding: 15px 10px 2px 10px;
+                padding: 15px 10px 15px 10px;
                 margin-top: 0.5rem;
+                @include responsive("small") {
+                    border: none;
+                    padding: 0;
+                }
                 .accordion-navigation {
                     width: 100%;
                 }
@@ -159,6 +176,47 @@
                     margin-top: 5px;
                 }
             }
+        }
+        .filter_icon {
+            display: none;
+            float: left;
+            margin-right: 10px;
+            margin-top: 2px;
+        }
+        @include responsive("small") {
+            margin-top: 0;
+            #facetedSearch {
+                .facetedSearch-toggle {
+                    margin-bottom: 0;
+                    width: 38%;
+                    float: right;
+                    border-radius: 3px;
+                    border: 1px solid #48A9C5;
+                    background: rgba(72, 169, 197, 0.09);
+                }
+                .facetedSearch-toggle-indicator {
+                    width: auto;
+                }
+                .facetedSearch-toggle-text {
+                    display: none;
+                }
+                .toggleLink-text .default_icon{
+                    display: none;
+                }
+                .filter_icon {
+                    display: block;
+                }
+            }
+        }
+    }
+    @include responsive("small") {
+        .actionBar {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .cat_product_total {
+            position: absolute;
+            margin-top: -37px !important;
         }
     }
 }
