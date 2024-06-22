@@ -220,3 +220,26 @@
         }
     }
 }
+
+.search-page {
+    .page-heading {
+        margin: 22px 0;
+    }
+    .search-nav {
+        margin-bottom: 2.5rem;
+    }
+    .page-sidebar {
+        margin-top: 4px !important;
+    }
+    .panel-body {
+        margin-bottom: 0;
+    }
+    .actionBar {
+        margin-bottom: 1.3rem;
+        .actionBar-section  {
+            .form-field {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
