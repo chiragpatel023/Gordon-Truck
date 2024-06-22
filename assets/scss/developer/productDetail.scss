@@ -1,0 +1,81 @@
+.product_detail {
+    .productView {
+        padding-top: 1.5rem;
+    }
+    .productView-details {
+        background: #ffffff;
+        margin-bottom: 0;
+        padding: 0 20px;
+        .productView-brand {
+            margin-top: 30px;
+            color: #757575;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        .productView-title {
+            margin-top: 0;
+            margin-bottom: 14px;
+        }
+        .productView-rating {
+            margin-bottom: 14px;
+        }
+        .productView-price {
+            margin-bottom: 14px;
+            color: #48A9C5;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            .price--non-sale {
+                color: #183D6A;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 15px; 
+                text-decoration-line: strikethrough;
+            }
+            .price-now-label {
+                display: none;
+            }
+            .add-to-cart-wrapper {
+                .button--icon svg {
+                    width: 15.653px !important;
+                    height: 15.181px !important;
+                }
+            }
+        }
+    }
+    .productView-images {
+        .productView-thumbnails {
+            margin-top: 15px;
+            .productView-thumbnail {
+                width: 80px !important;
+                height: 65px !important;
+                margin-right: 10px;
+            }
+            img {
+                padding-left: 0;
+                border-radius: 3px;
+                border: 1px solid #d7d7d7;
+                width: 80px !important;
+                height: 65px !important;
+            }
+            img:hover { 
+                border: 1px solid #48A9C5;
+            }
+            a {
+                width: 80px !important;
+                height: 65px !important;
+                padding: 0;
+            }
+        }
+        .productView-thumbnail-link.is-active {
+            border-radius: 3px;
+            border: 1px solid #48A9C5;
+            border-bottom: none !important;
+        }
+    }
+}

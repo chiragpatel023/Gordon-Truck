@@ -2,14 +2,21 @@
     {{#if theme_settings.show_product_quantity_box}}
         {{inject 'productQuantityErrorMessage'  (lang 'products.quantity_error_message')}}
         <div class="form-field form-field--increments">
-            <label class="form-label form-label--alternate"
-                   for="qty[]">{{lang 'products.quantity'}}</label>
+            {{!-- <label class="form-label form-label--alternate"
+                   for="qty[]">{{lang 'products.quantity'}}</label> --}}
                 <div class="form-increment" data-quantity-change>
                     <button class="button button--icon" data-action="dec">
                         <span class="is-srOnly">{{lang 'products.quantity_decrease' name=product.title}}</span>
                         <i class="icon" aria-hidden="true">
-                            <svg>
-                                <use xlink:href="#icon-keyboard-arrow-down"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 17 16" fill="none">
+                                <g clip-path="url(#clip0_94_112)">
+                                  <path d="M3.91406 6.92188H13.0448" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_94_112">
+                                    <rect width="15.6528" height="15.1807" fill="white" transform="translate(0.652344 0.3479)"/>
+                                  </clipPath>
+                                </defs>
                             </svg>
                         </i>
                     </button>
@@ -26,8 +33,16 @@
                     <button class="button button--icon" data-action="inc">
                         <span class="is-srOnly">{{lang 'products.quantity_increase' name=product.title}}</span>
                         <i class="icon" aria-hidden="true">
-                            <svg>
-                                <use xlink:href="#icon-keyboard-arrow-up"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 17 16" fill="none">
+                                <g clip-path="url(#clip0_94_115)">
+                                  <path d="M8.46094 2.67969V11.1583" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M3.89453 6.92188H13.0253" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_94_115">
+                                    <rect width="15.6528" height="15.1807" fill="white" transform="translate(0.632812 0.3479)"/>
+                                  </clipPath>
+                                </defs>
                             </svg>
                         </i>
                     </button>
