@@ -1641,6 +1641,13 @@ window.addEventListener("resize", function() {
         $(".filter_label_text").html('Show Filters');
         e.preventDefault();
     });
+
+
+    $(".accordion-block .accordion-content").each(function() { 
+        $(this).removeClass("is-open");
+        $(this).attr("aria-hidden","true");
+    });
+
   
   });
 </script>
