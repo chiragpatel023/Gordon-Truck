@@ -17,7 +17,7 @@ product:
     {{#each product.shipping_messages}}
         {{> components/common/alert/alert-info message}}
     {{/each}}
-
+    <div class="product_detail">
     <div>
         {{> components/products/product-view settings=../settings schema=true  }}
 
@@ -36,6 +36,6 @@ product:
     </div>
 
     {{> components/products/schema}}
-
+</div>
 {{/partial}}
 {{> layout/product}}

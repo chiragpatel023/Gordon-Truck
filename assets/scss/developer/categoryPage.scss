@@ -1,4 +1,18 @@
 .category-page {
+    .category_full_width {
+        .page-sidebar {
+            display: none;
+        }
+        .page-content {
+            width: 100%;
+        }
+        .productGrid .product {
+            width: 20% !important;
+        }
+        .actionBar .filter_option {
+            width: 83%;
+        }
+    }
     .page-sidebar + .page-content {
         padding-left: 0 !important;
     }
@@ -22,9 +36,14 @@
             font-style: normal;
             font-weight: 400;
             line-height: 18.19px;
+            float: right;
+            margin-top: 10px;
         }
         .actionBar-section {
             float: right;
+            @include responsive("small") {
+                display: none;
+            }
             .form-field {
                 border-radius: 3px !important;
                 border: 1px solid #ECECED;
@@ -32,27 +51,37 @@
                 margin-bottom: 1em;
             }
         }
-        .filter_toggle {
+        .filter_option {
             float: left;
-            border: 1px solid #48A9C5;
-            background: rgba(72, 169, 197, 0.09);
-            border-radius: 3px;
-            padding: 12px 20px 5px 15px;
-            .filter_label {
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                color: #48A9C5;
-                text-decoration: none;
+            width: 78%;
+            @include responsive("small") {
+                width: auto;
             }
-            svg {
-                top: 10px !important;
-            }
-            span {
-                float: right;
-                margin-top: -2px;
-                margin-left: 8px;
+            .filter_toggle {
+                float: left;
+                border: 1px solid #48A9C5;
+                background: rgba(72, 169, 197, 0.09);
+                border-radius: 3px;
+                padding: 12px 20px 5px 15px;
+                @include responsive("small") {
+                    display: none;
+                }
+                .filter_label {
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    color: #48A9C5;
+                    text-decoration: none;
+                }
+                svg {
+                    top: 10px !important;
+                }
+                span {
+                    float: right;
+                    margin-top: -2px;
+                    margin-left: 8px;
+                }
             }
         }
     }
@@ -97,9 +126,26 @@
     }
     .page-sidebar {
         margin-top: 26px;
+        .facetedSearch-navList {
+            margin-top: 0;
+            @include responsive("small") {
+                .accordion {
+                    border: none;
+                }    
+            }
+        }
+        .facetedSearch-refineFilters {
+            background: #fff;
+            padding: 15px 10px 2px 10px;
+        }
         .sidebarBlock {
-            background-color: #ffffff;
-            padding: 15px;
+            .navList-action--checkbox::before {
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+                border-radius: 3px;
+                border: 1.5px solid rgba(117, 117, 117, 0.50);
+            }
             h5 {
                 color: #000;
                 font-size: 14px;
@@ -110,7 +156,111 @@
             }
             .navList {
                 margin-bottom: 0;
+                margin-top: 10px;
             }
+            .accordion-block {
+                background: #fff;
+                padding: 15px 10px 15px 10px;
+                margin-top: 0.5rem;
+                @include responsive("small") {
+                    border: none;
+                    padding: 0;
+                    background: transparent;
+                }
+                .accordion-navigation {
+                    width: 100%;
+                    padding-left: 0;
+                    @include responsive("small") {
+                        background: #fff;
+                    }
+                }
+                .accordion-title {
+                    font-weight: 700;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: #000000;
+                    float: left;
+                    margin-bottom: 0;
+                }
+                .accordion-indicator {
+                    width: 12px;
+                    float: right;
+                    margin-top: 5px;
+                    @include responsive("small") {
+                        margin-top: 19px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .filter_icon {
+            display: none;
+            float: left;
+            margin-right: 10px;
+            margin-top: 2px;
+        }
+        @include responsive("small") {
+            margin-top: 0;
+            #facetedSearch {
+                .facetedSearch-toggle {
+                    margin-bottom: 10px;
+                    width: 38%;
+                    float: right;
+                    border-radius: 3px;
+                    border: 1px solid #48A9C5;
+                    background: rgba(72, 169, 197, 0.09);
+                }
+                .facetedSearch-toggle-indicator {
+                    width: auto;
+                }
+                .facetedSearch-toggle-text {
+                    display: none;
+                }
+                .toggleLink-text .default_icon{
+                    display: none;
+                }
+                .filter_icon {
+                    display: block;
+                }
+            }
+        }
+    }
+    @include responsive("small") {
+        .actionBar {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .cat_product_total {
+            position: absolute;
+            margin-top: -37px !important;
+        }
+    }
+}
+
+.search-page {
+    .page-heading {
+        margin: 22px 0;
+    }
+    .search-nav {
+        margin-bottom: 2.5rem;
+    }
+    .page-sidebar {
+        margin-top: 4px !important;
+    }
+    .panel-body {
+        margin-bottom: 0;
+    }
+    .actionBar {
+        margin-bottom: 1.3rem;
+        .actionBar-section  {
+            .form-field {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .cat_product_total {
+        @include responsive("small") {
+            margin-top: -126px !important;
         }
     }
 }

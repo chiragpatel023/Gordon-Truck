@@ -105,7 +105,7 @@
             width: 24px;
             height: 24px;
             float: right;
-            margin-top: 10px;
+            margin-top: 7px;
             margin-right: 8px;
             @include responsive ("small") { 
                 margin-top:1px;
@@ -132,8 +132,7 @@
         }
         @include responsive ("small") { 
             figcaption.card-figcaption.mobile {
-                padding: 0 9px !important;
-                margin-top: 0;
+                display: none;
             }
         }
     }
@@ -193,11 +192,15 @@
             text-transform: uppercase !important;
             font-style: normal !important;
             margin-top: 10px !important;
+            padding: 0.57143rem 0.5rem 0.57143rem 1.5rem !important;
             img {
                 height: 16px;
                 width: 16px;
                 float: left;
                 margin-left: 40px;
+                @include responsive ("small") { 
+                    margin-left: 0 !important;
+                }
             }
             span {
                 margin-right: 45px;

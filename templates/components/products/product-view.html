@@ -10,12 +10,12 @@
 
     <section class="productView-details">
         <div class="productView-product">
-            <h1 class="productView-title">{{product.title}}</h1>
             {{#if product.brand}}
                 <h2 class="productView-brand">
                     <a href="{{product.brand.url}}"><span>{{product.brand.name}}</span></a>
                 </h2>
             {{/if}}
+            <h1 class="productView-title">{{product.title}}</h1>
             <div class="productView-rating"{{#if product.num_reviews '>' 0}}{{/if}}>
                 {{#if settings.show_product_rating}}
                     {{> components/products/ratings rating=product.rating}}
@@ -265,10 +265,12 @@
                     {{/if}}
                 {{/if}}
             </form>
-            {{#if settings.show_wishlist}}
-                {{> components/common/wishlist-dropdown}}
-            {{/if}}
+            
         </div>
+        {{#if settings.show_wishlist}}
+            {{> components/common/wishlist-dropdown}}
+        {{/if}}
+        
         {{> components/common/share}}
         {{{snippet 'product_details'}}}
     </section>
