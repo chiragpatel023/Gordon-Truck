@@ -3,6 +3,9 @@ body {font-family: "Oswald", sans-serif;}
 #mask {width: 100%;}
 .header{
     background-color: #000000;
+    .dropdown--quickSearch {
+        position: static !important;
+    }
     #account-dropdown-signin-list {
         top: 48px !important;
     }
@@ -493,5 +496,25 @@ header ul.navUser-section.navUser-section--alt {
     }
     header.header .dropdown--quickSearch {
         top: -29px !important;
+    }
+    .header .fixed li.navUser-item.navUser-item--account.user-icons.account {
+        top: 0 !important;
+    }
+}
+@media (max-width: 1024px)  {
+    header .dropdown--quickSearch {
+        position: static !important;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1920px) {
+    header .dropdown--quickSearch {
+        position: absolute !important;
+    }
+    header .user-icons {
+        float: right !important;
+    }
+    .header .fixed #quickSearch .container {
+        margin-left: -154px;
+        top: 6px !important;
     }
 }
