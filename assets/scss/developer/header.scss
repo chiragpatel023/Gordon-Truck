@@ -3,6 +3,9 @@ body {font-family: "Oswald", sans-serif;}
 #mask {width: 100%;}
 .header{
     background-color: #000000;
+    .dropdown--quickSearch {
+        position: static !important;
+    }
     #account-dropdown-signin-list {
         top: 48px !important;
     }
@@ -247,18 +250,21 @@ body {font-family: "Oswald", sans-serif;}
         .search-icon {
             width: 33px;
             svg{
-                stroke: #fff;
-                fill: #fff;
-                z-index: 999999;
+                stroke: #fff !important;
+                fill: #fff !important;
+                z-index: 9999999;
                 left: -6px;
             }
         }
+        .dropdown--quickSearch {
+            margin-top: 10px !important;
+        }
         .dropdown--quickSearch.desktop {
-            max-width: 420px;
-            position: absolute;
+            /*max-width: 420px;
+            position: absolute;*/
         }
         .dropdown--quickSearch .form-input {
-            width: 420px;
+            /*width: 420px;*/
             height: 40px;
             border: 1px solid #D4D4D4;
             border-radius: 5px;
@@ -275,8 +281,12 @@ body {font-family: "Oswald", sans-serif;}
 
         .customer_support {
             color: #ffffff !important;
-            margin-right: 50px;
+           /* margin-right: 50px;*/
+            cursor: pointer;
             @include responsive ("small") {
+                display: none;
+            }
+            @include responsive ("medium") {
                 display: none;
             }
             ul {
@@ -305,6 +315,60 @@ body {font-family: "Oswald", sans-serif;}
             .support_detail {
                 .support_arrow {
                     margin-left: 8px;
+                }
+            }
+            .customer_support_detail {
+                display: none;
+                background: #fff;
+                color:#000000;
+                position: absolute;
+                z-index: 9999999999;
+                width: 35%;
+                margin-top: 5px;
+                .is-visible {
+                    display: block;
+                }
+                .heading_highlight {
+                    color: #48A9C5;
+                    font-weight: 600;
+                }
+                a {
+                    text-decoration: none;
+                }
+                p {
+                    color: #000000;
+                    font-weight: normal;
+                    margin-bottom: 1rem !important;
+                }
+                h4 {
+                    margin: 0;
+                }
+                ul {
+                    margin-top: 12px;
+                    border-top: 1px solid #000000;
+                    padding-top: 12px;
+                }
+                svg {
+                    height: 18px;
+                    width: 18px;
+                    float: left;
+                    margin-top: 3px;
+                    margin-right: 8px;
+                }
+                .left {
+                    float: left;
+                    width: 50%;
+                    background: #f5f5f5;
+                    padding: 15px;
+                    
+                }
+                .right {
+                    float: right;
+                    width: 50%;
+                    padding: 15px;
+                    li {
+                        margin-bottom: 1rem;
+                    }
                 }
             }
         }
@@ -380,5 +444,77 @@ body {font-family: "Oswald", sans-serif;}
         .search-icon.submit {
             top: 0;
         }
+    }
+    .quickSearchResults {
+        left: -45% !important;
+        top: 97% !important;
+        z-index: 9999999999 !important;
+        .productGrid li .card-cart-btn img {
+            margin-left: 13px !important;
+        }
+        .card {
+            min-height: 418px;
+        }
+        .card--alternate:hover .card-body {
+            background: #ffffff !important;
+        }
+    }
+    .quickSearchResults article.card--alternate:hover .card-body p, .quickSearchResults article.card--alternate:hover .card-body h4.card-title a, .quickSearchResults article.card--alternate:hover .card-body .card-text {
+        color: #000000 !important
+    }
+    .quickSearchResults a.button.button--small.card-figcaption-button {
+        width: 100% !important;
+    }
+}
+
+header ul.navUser-section.navUser-section--alt {
+    justify-content: space-between !important;
+}
+
+@include responsive ("medium") { 
+    .logo-user-section.container {
+        background: #000000 !important;
+    }
+    .navUser-item svg, li.navUser-item.quicksearch.mobile svg, header .navUser-action .header-icon svg, .header .navUser-action svg {
+        fill: #ffffff !important;
+        stroke: #ffffff !important;
+    }
+    header li.navUser-item.navUser-item--account.user-icons.account {
+        margin-right: -8px;
+    }
+    header .mobileMenu-toggle .mobileMenu-toggleIcon, .mobileMenu-toggle .mobileMenu-toggleIcon::after, .mobileMenu-toggle .mobileMenu-toggleIcon::before {
+        background: #ffffff !important;
+    }
+    header .mobileMenu-toggle .mobileMenu-toggleIcon::before, header .mobileMenu-toggle .mobileMenu-toggleIcon::after { 
+        background: #ffffff !important;     
+    }
+    .dropdown--quickSearch.is-open {
+        background: #ffffff !important;
+    }
+    .dropdown--quickSearch .form fieldset {
+        border-bottom: none !important;
+    }
+    header.header .dropdown--quickSearch {
+        top: -29px !important;
+    }
+    .header .fixed li.navUser-item.navUser-item--account.user-icons.account {
+        top: 0 !important;
+    }
+}
+@media (max-width: 1024px)  {
+    header .dropdown--quickSearch {
+        position: static !important;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1920px) {
+    header .dropdown--quickSearch {
+        position: absolute !important;
+    }
+    header .user-icons {
+        float: right !important;
+    }
+    .header .fixed #quickSearch .container {
+        margin-left: -154px;
+        top: 6px !important;
     }
 }

@@ -1648,6 +1648,12 @@ window.addEventListener("resize", function() {
         $(this).attr("aria-hidden","true");
     });
 
+    $("header .customer_support").mouseenter(function(){
+        $(".customer_support_detail").show();
+    });
+    $("header .customer_support").mouseleave(function(){
+      $(".customer_support_detail").hide();
+    });
   
   });
 </script>

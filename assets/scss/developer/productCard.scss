@@ -364,3 +364,17 @@ margin-top: -28px;
     }
 }
 }
+
+
+@media (min-width: 1024px) and (max-width: 1920px) { 
+    .productCarousel .card-body .card-cart-btn img, .productGrid .card-body .card-cart-btn img {
+        margin-left: 15px;
+    }
+    .productCarousel .card-body .card-cart-btn span, .productGrid .card-body .card-cart-btn span {
+        margin-left: -14px;
+        margin-right: 0;
+    }
+    .productCarousel .productCarousel-slide .card, .productCarousel li .card, .productGrid .productCarousel-slide .card, .productGrid li .card {
+        min-height: 429px;
+    }
+}
