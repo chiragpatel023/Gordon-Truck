@@ -29,7 +29,6 @@
         text-align: -webkit-center;
         img {
             width: 113px;
-            height: 113px;
             flex-shrink: 0;
             @include responsive ("small") { 
                 width: 58px;
