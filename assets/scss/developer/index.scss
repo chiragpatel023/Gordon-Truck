@@ -269,10 +269,21 @@ $breakpoints: (
                 @include responsive ("small") { 
                     width: auto;
                     height: 32px;
-                    margin-top: 5px;
+                    margin-top: 6px !important;
                     font-size: 10px;
                     text-transform: uppercase;
-                    padding-top: 8px
+                    padding: 0 !important;
+                }
+                @include responsive ("medium") { 
+                    padding: 1rem;
+                    margin-top: 1px;
+                    width: 30%;
+                }
+                @media (min-width: 1024px) and (max-width: 1920px) {
+                    margin-top: -4px !important;
+                    height: 3.5rem !important;
+                    margin-right: -3px !important;
+                    width: 30% !important;
                 }
             }
             .form-input{
