@@ -154,7 +154,7 @@ gql: 'query getBrands {
         {{#each gql.data.site.brands.edges}} 
         
             <div class="list-brand">
-                <a href="{{path}}"><img src="{{node.defaultImage.urlOriginal}}"></a>
+                <a href="{{node.path}}"><img src="{{node.defaultImage.urlOriginal}}"></a>
             </div>
         {{/each}}
       </div>
