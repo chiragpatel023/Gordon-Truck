@@ -29,7 +29,6 @@
         text-align: -webkit-center;
         img {
             width: 113px;
-            height: 113px;
             flex-shrink: 0;
             @include responsive ("small") { 
                 width: 58px;
@@ -337,6 +336,10 @@ margin-top: -28px;
         line-height: normal;
         letter-spacing: 1.2px;
         text-transform: uppercase;
+        @include responsive ("medium") {
+            margin-bottom: 0 !important;
+            margin-top: 20px !important;
+         }
     }
     .section-title {
         color: #FFF;
@@ -351,6 +354,9 @@ margin-top: -28px;
             font-size: 20px;
             line-height: 25px;
         }
+        @include responsive ("medium") {
+            margin-top: 0 !important;
+         }
     }
     .section-description {
         color: #FFF;
