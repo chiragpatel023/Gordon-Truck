@@ -15,6 +15,26 @@ body {font-family: "Oswald", sans-serif;}
         top: -4px !important;
     }
     .custom_link {display: none;}
+    li.navUser-item.navUser-item--account.user-icons.account{
+        #account-dropdown-signout-list {
+            top: 60px;
+            right: 0px !important;
+            left: auto;
+            .navBar--account.signout-list{
+                &:after{
+                    position: absolute;
+                    content: "";
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid #48A9C5;
+                    right: -2px;
+                    top: -20px;
+                }
+            }
+        }
+    }
+    
     .user-icons {
         .cart-quantity {
             background-color: #48a9c5;
@@ -301,7 +321,7 @@ body {font-family: "Oswald", sans-serif;}
 
         .customer_support {
             color: #ffffff !important;
-           /* margin-right: 50px;*/
+            position: relative;
             cursor: pointer;
             @include responsive ("small") {
                 display: none;
@@ -347,16 +367,16 @@ body {font-family: "Oswald", sans-serif;}
                 position: absolute;
                 z-index: 9999999999;
                 margin-top: 5px;
-                width: 40%;
-                right: 26%;
-                @media (max-width: 1024px)  {
+                width: 250%;
+                right: 0;
+                /*@media (max-width: 1024px)  {
                     width: 40%;
                     right: 26%;
                 }
                 @media (min-width: 1024px) and (max-width: 1920px) { 
                     width: 48%;
                     right: 18%;
-                }
+                }*/
                 .is-visible {
                     display: block;
                 }
@@ -405,7 +425,7 @@ body {font-family: "Oswald", sans-serif;}
                     }
                 }
             }
-            /*.customer_support_detail:after {
+            .customer_support_detail:after {
                 position: absolute;
                 content: "";
                 border-left: 10px solid transparent;
@@ -413,8 +433,8 @@ body {font-family: "Oswald", sans-serif;}
                 border-top: 10px solid transparent;
                 border-bottom: 10px solid #48A9C5 ;
                 right: 0;
-                top: -20px;
-            }*/
+                top: -19px;
+            }
         }
     }
 
