@@ -57,6 +57,9 @@
             @include responsive("small") {
                 width: auto;
             }
+            @media (min-width: 1024px) and (max-width: 1920px) {
+                width: 16% !important;
+            }
             .filter_toggle {
                 float: left;
                 border: 1px solid #48A9C5;
@@ -64,6 +67,9 @@
                 border-radius: 3px;
                 padding: 12px 20px 5px 15px;
                 @include responsive("small") {
+                    display: none;
+                }
+                @include responsive("medium") {
                     display: none;
                 }
                 .filter_label {
@@ -126,6 +132,11 @@
     }
     .page-sidebar {
         margin-top: 26px;
+        @include responsive("medium") {
+            width: 50%;
+            position: absolute;
+            top: 11rem;
+        }
         .facetedSearch-navList {
             margin-top: 0;
             @include responsive("small") {
@@ -224,15 +235,61 @@
                 }
             }
         }
+        @include responsive("medium") {
+            margin-top: 0;
+            #facetedSearch {
+                .facetedSearch-toggle {
+                    margin-top: 5px;
+                    width: 38%;
+                    float: left;
+                    border-radius: 3px;
+                    border: 1px solid #48A9C5;
+                    background: rgba(72, 169, 197, 0.09);
+                    padding: 0.6rem;
+                    position: absolute;
+                    top: -2rem;
+                }
+                .facetedSearch-toggle-indicator {
+                    width: auto;
+                }
+                .facetedSearch-toggle-text {
+                    display: none;
+                }
+                .toggleLink-text .default_icon{
+                    display: none;
+                }
+                .filter_icon {
+                    display: block;
+                }
+            }
+        }
     }
     @include responsive("small") {
         .actionBar {
             margin-top: 0;
             margin-bottom: 20px;
         }
-        .cat_product_total {
+    }
+    .cat_product_total {
+        @include responsive("small") {
+            display: none;
+        }
+        @include responsive("medium") { 
             position: absolute;
-            margin-top: -37px !important;
+            right: 17rem;
+        }
+        @media (min-width: 1024px) and (max-width: 1920px) { 
+            position: absolute;
+            top: 9.3rem;
+            right: 17rem;
+        }
+    }
+    .cat_product_total_small_screen {
+        display: none;
+        @include responsive("small") {
+            display: block;
+            position: absolute;
+            margin-top: 18px !important;
         }
     }
 }

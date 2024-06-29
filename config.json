@@ -806,7 +806,8 @@
         "footer-bottom-backgroundColor": "#191919",
         "footer-bottom-textColor": "#b2b2b2",
         "footer_payment_section_border_color": "#363636",
-        "mobile_menu_icon_color": "#2f2f2b"
+        "mobile_menu_icon_color": "#2f2f2b",
+        "visible_subcategoires": false
       }
     },
     {
