@@ -30,7 +30,7 @@
     }
     .cat_product_total_small_screen {
         display: none;
-        width: 20%;
+        width: 30%;
         position: absolute;
         top: 8rem;
         @include responsive("small") {
@@ -213,6 +213,9 @@
                     @include responsive("small") {
                         background: #fff;
                     }
+                    @include responsive("medium") {
+                        border: none !important;
+                    }
                 }
                 .accordion-title {
                     font-weight: 700;
@@ -238,6 +241,9 @@
             float: left;
             margin-right: 10px;
             margin-top: 2px;
+            @include responsive("small") {
+                margin-right: 0;
+            }
         }
         @include responsive("small") {
             margin-top: 0;

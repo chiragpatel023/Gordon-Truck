@@ -96,6 +96,15 @@
             @include responsive ("small") { 
                 min-height: 395px;
             }
+            @include responsive ("medium") { 
+                min-height: 395px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                min-height: 395px;
+            }
+        }
+        figcaption.card-figcaption.mobile {
+            display: none;
         }
         .sale-flag-side{
             left: 10px;
@@ -108,6 +117,9 @@
             margin-right: 8px;
             @include responsive ("small") { 
                 margin-top:1px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                margin-top: 0;
             }
         }
         .img_count {
@@ -191,12 +203,26 @@
             text-transform: uppercase !important;
             font-style: normal !important;
             margin-top: 10px !important;
+            padding-left: 4rem;
+            padding-right: 4rem;
             /*padding: 0.57143rem 0.5rem 0.57143rem 1.5rem !important;*/
+            @include responsive("small") {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+            @include responsive("medium") {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
             img {
                 height: 16px;
                 width: 16px;
-                /*float: left;
-                margin-left: 10px !important;
+                float: left;
+                /*margin-left: 10px !important;
                 @include responsive ("small") { 
                     margin-left: 15px !important;
                 }
@@ -222,7 +248,7 @@
     }
 }
 .productGrid {
-    li {
+   /* li {
         .card-cart-btn {
             img{
                 margin-left: 30px !important;
@@ -234,7 +260,7 @@
         .card {
             margin-bottom: 1rem;
         }
-    } 
+    } */
 }
 
 .blog-section {
@@ -378,7 +404,7 @@ margin-top: -28px;
 }
 
 
-@media (min-width: 1024px) and (max-width: 1920px) { 
+/*@media (min-width: 1024px) and (max-width: 1920px) { 
     .productCarousel .card-body .card-cart-btn img, .productGrid .card-body .card-cart-btn img {
         margin-left: 15px;
     }
@@ -388,4 +414,4 @@ margin-top: -28px;
     .productCarousel .productCarousel-slide .card, .productCarousel li .card, .productGrid .productCarousel-slide .card, .productGrid li .card {
         min-height: 429px;
     }
-}
+}*/
