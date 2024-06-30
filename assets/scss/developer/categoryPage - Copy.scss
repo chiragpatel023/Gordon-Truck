@@ -15,6 +15,9 @@
     }
     .page-sidebar + .page-content {
         padding-left: 0 !important;
+        @include responsive("small") {
+            padding-top: 20px !important;
+        }
     }
     .productGrid {
         margin-bottom: 0;
@@ -28,28 +31,6 @@
         text-transform: uppercase !important;
         margin: 22px 0;
     }
-    .cat_product_total_small_screen {
-        display: none;
-        width: 20%;
-        position: absolute;
-        top: 8rem;
-        @include responsive("small") {
-            display: block !important;
-        }
-        @include responsive("medium") {
-            display: none;
-        }
-        @media (min-width: 1024px) and (max-width: 1920px) { 
-            display: none;
-        }
-    }
-    .facetedSearch-toggle {
-        @include responsive("medium") {
-            border-radius: 3px !important;
-            border: 1px solid #48A9C5 !important;
-            background: rgba(72, 169, 197, 0.09) !important;
-        }
-    }
     .actionBar {
         margin-bottom: 0;
         .cat_product_total {
@@ -60,18 +41,6 @@
             line-height: 18.19px;
             float: right;
             margin-top: 10px;
-            @include responsive("small") {
-                display: none !important;
-            }
-            @include responsive("medium") {
-                float: left;
-                position: absolute;
-                top: 16.5rem;
-            }
-            @media (min-width: 1024px) and (max-width: 1920px) { 
-                position: absolute;
-                right: 18rem;
-            }
         }
         .actionBar-section {
             float: right;
@@ -88,11 +57,11 @@
         .filter_option {
             float: left;
             width: 78%;
-            @media (min-width: 1024px) and (max-width: 1920px) {
-                width: auto;
-            }
             @include responsive("small") {
                 width: auto;
+            }
+            @media (min-width: 1024px) and (max-width: 1920px) {
+                width: 16% !important;
             }
             .filter_toggle {
                 float: left;
@@ -166,6 +135,16 @@
     }
     .page-sidebar {
         margin-top: 26px;
+        @include responsive("medium") {
+            width: 50%;
+            position: absolute;
+            top: 11rem;
+        }
+        @include responsive("medium") {
+            width: 50%;
+            position: absolute;
+            top: 11rem;
+        }
         .facetedSearch-navList {
             margin-top: 0;
             @include responsive("small") {
@@ -243,13 +222,43 @@
             margin-top: 0;
             #facetedSearch {
                 .facetedSearch-toggle {
-                    margin-bottom: 10px;
-                    width: 30%;
-                    float: right;
+                    width: auto !important;
                     border-radius: 3px;
                     border: 1px solid #48A9C5;
                     background: rgba(72, 169, 197, 0.09);
-                    padding: 0.5rem;
+                    padding: 0.6rem;
+                    position: absolute;
+                    top: -5rem !important;
+                    right: -12.5rem;
+        
+                }
+                .facetedSearch-toggle-indicator {
+                    width: auto;
+                }
+                .facetedSearch-toggle-text {
+                    display: none;
+                }
+                .toggleLink-text .default_icon{
+                    display: none;
+                }
+                .filter_icon {
+                    display: block;
+                }
+            }
+        }
+        @include responsive("medium") {
+            margin-top: 0;
+            #facetedSearch {
+                .facetedSearch-toggle {
+                    margin-top: 5px;
+                    width: 38%;
+                    float: left;
+                    border-radius: 3px;
+                    border: 1px solid #48A9C5;
+                    background: rgba(72, 169, 197, 0.09);
+                    padding: 0.6rem;
+                    position: absolute;
+                    top: -2rem;
                 }
                 .facetedSearch-toggle-indicator {
                     width: auto;
@@ -271,9 +280,27 @@
             margin-top: 0;
             margin-bottom: 20px;
         }
-        .cat_product_total {
+    }
+    .cat_product_total {
+        @include responsive("small") {
+            display: none;
+        }
+        @include responsive("medium") { 
             position: absolute;
-            margin-top: -37px !important;
+            right: 17rem;
+        }
+        @media (min-width: 1024px) and (max-width: 1920px) { 
+            position: absolute;
+            top: 9.3rem;
+            right: 17rem;
+        }
+    }
+    .cat_product_total_small_screen {
+        display: none;
+        @include responsive("small") {
+            display: block;
+            position: absolute;
+            margin-top: -4px !important;
         }
     }
 }

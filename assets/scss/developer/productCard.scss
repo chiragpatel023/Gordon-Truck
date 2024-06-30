@@ -191,17 +191,23 @@
             text-transform: uppercase !important;
             font-style: normal !important;
             margin-top: 10px !important;
-            padding: 0.57143rem 0.5rem 0.57143rem 1.5rem !important;
+            /*padding: 0.57143rem 0.5rem 0.57143rem 1.5rem !important;*/
             img {
                 height: 16px;
                 width: 16px;
-                float: left;
-                margin-left: 40px;
+                /*float: left;
+                margin-left: 10px !important;
                 @include responsive ("small") { 
+                    margin-left: 15px !important;
+                }
+                @include responsive ("medium") { 
                     margin-left: 0 !important;
                 }
+                @media (min-width: 1024px) and (max-width: 1920px) { 
+                    margin-left: 10px !important;
+                }*/
             }
-            span {
+            /*span {
                 margin-right: 45px;
             }
             @include responsive ("small") {
@@ -211,7 +217,7 @@
                 span {
                     margin-right: 0;
                 }
-            }
+            }*/
         }
     }
 }
@@ -377,7 +383,6 @@ margin-top: -28px;
         margin-left: 15px;
     }
     .productCarousel .card-body .card-cart-btn span, .productGrid .card-body .card-cart-btn span {
-        margin-left: -14px;
         margin-right: 0;
     }
     .productCarousel .productCarousel-slide .card, .productCarousel li .card, .productGrid .productCarousel-slide .card, .productGrid li .card {
