@@ -1,4 +1,10 @@
 .category-page {
+    @include responsive("medium") {
+        .page-content {
+            position: relative;
+        }
+    }
+    
     .category_full_width {
         .page-sidebar {
             display: none;
@@ -66,7 +72,6 @@
             @include responsive("medium") {
                 float: left;
                 position: absolute;
-                top: 16.5rem;
             }
             @media (min-width: 1024px) and (max-width: 1920px) { 
                 position: absolute;
@@ -306,8 +311,12 @@
         }
     }
     .cat_product_total {
+        display: none;
         @include responsive("small") {
             margin-top: -126px !important;
         }
+    }
+    .cat_product_total_small_screen {
+        display: none;
     }
 }
