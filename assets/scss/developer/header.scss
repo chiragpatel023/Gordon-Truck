@@ -532,6 +532,9 @@ body {font-family: "Oswald", sans-serif;}
         z-index: 9999999999 !important;
         .productGrid li .card-cart-btn img {
             margin-left: 13px !important;
+            @include responsive("medium") {
+                margin-left: 0 !important;
+            }
         }
         .card {
             min-height: 418px;
@@ -540,11 +543,24 @@ body {font-family: "Oswald", sans-serif;}
             background: #ffffff !important;
         }
     }
+    .quickSearchResults ul li {
+        @include responsive("medium") {
+            width: 50%;
+        }
+        .card-cart-btn img {
+            @include responsive("medium") { 
+                margin-left: 0 !important;
+            }
+        }
+    }
+    
     .quickSearchResults article.card--alternate:hover .card-body p, .quickSearchResults article.card--alternate:hover .card-body h4.card-title a, .quickSearchResults article.card--alternate:hover .card-body .card-text {
         color: #000000 !important
     }
     .quickSearchResults a.button.button--small.card-figcaption-button {
         width: 100% !important;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 

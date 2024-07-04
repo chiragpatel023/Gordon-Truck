@@ -47,6 +47,89 @@
                 }
             }
         }
+        #add-to-cart-wrapper {
+            .button--icon {
+                border-color: #ECECED !important;
+            }
+            .form-input--incrementTotal {
+                border: 1px solid #ECECED !important;
+                height: 2.9rem;
+            }
+            .button--icon svg {
+                height: 15px;
+                width: 15px;
+                margin-top: 9px;
+            }
+            .form-field--increments {
+                float: left;
+                width: 22%;
+            }
+            .form-action {
+                float: right !important;
+                width: 76% !important;
+                margin-top: 0 !important;
+            }
+            #form-action-addToCart {
+                border-radius: 0;
+                width: 100%;
+            }
+            .form-increment .button {
+                height: 42px;
+            }   
+        }
+        .form-wishlist {
+            width: 23%;
+            a {
+                text-align: left !important;
+                padding-left: 0 !important;
+            }
+        }
+        .delivery_section {
+            ul {
+                list-style: none;
+                margin-left: 0;
+                li {
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 25.6px;
+                }
+            }
+            svg {
+                margin-right: 7px;
+            }
+        }
+        .customer_support {
+            ul {
+                display: inline-flex;
+                list-style: none;
+                margin-left: 0;
+            }
+            .support_detail {
+                margin-left: 1rem;
+                .heading {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 30px; /* 187.5% */
+                    text-transform: uppercase;
+                }
+                .subheading {
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+                .phone {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 30px; /* 187.5% */
+                    text-transform: uppercase;
+                    color: #48A9C5;
+                }
+            }
+        }
     }
     .productView-images {
         .productView-thumbnails {

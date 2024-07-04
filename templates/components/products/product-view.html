@@ -117,12 +117,12 @@
 
     <section class="productView-details">
             <dl class="productView-info">
-                {{#if product.sku}}
+                {{!-- {{#if product.sku}}
                   <div class="line-item-details sku">
                     <dt class="productView-info-name">{{lang 'products.sku'}}</dt>
                     <dd class="productView-info-value" data-product-sku>{{product.sku}}</dd>
                   </div>
-                {{/if}}
+                {{/if}} --}}
                 {{#if product.upc}}
                 <div class="line-item-details upc">
                     <dt class="productView-info-name">{{lang 'products.upc'}}</dt>
@@ -271,8 +271,52 @@
             {{> components/common/wishlist-dropdown}}
         {{/if}}
         
-        {{> components/common/share}}
+        {{!-- {{> components/common/share}} --}}  
         {{{snippet 'product_details'}}}
+
+        <div class="delivery_section">
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12" fill="none">
+                    <path d="M0 0V1.09091H10.0938V9.27273H6.82337C6.58644 8.33509 5.76512 7.63636 4.78125 7.63636C3.79737 7.63636 2.97606 8.33509 2.73913 9.27273H2.125V6.54545H1.0625V10.3636H2.73913C2.97606 11.3013 3.79737 12 4.78125 12C5.76512 12 6.58644 11.3013 6.82337 10.3636H11.2391C11.4761 11.3013 12.2974 12 13.2812 12C14.2651 12 15.0864 11.3013 15.3234 10.3636H17V5.91491L16.9665 5.82927L15.904 2.55655L15.7887 2.18182H11.1562V0H0ZM0.53125 2.18182V3.27273H5.3125V2.18182H0.53125ZM11.1562 3.27273H15.0243L15.9375 6.06818V9.27273H15.3234C15.0864 8.33509 14.2651 7.63636 13.2812 7.63636C12.2974 7.63636 11.4761 8.33509 11.2391 9.27273H11.1562V3.27273ZM1.0625 4.36364V5.45455H4.25V4.36364H1.0625ZM4.78125 8.72727C5.37466 8.72727 5.84375 9.20891 5.84375 9.81818C5.84375 10.4275 5.37466 10.9091 4.78125 10.9091C4.18784 10.9091 3.71875 10.4275 3.71875 9.81818C3.71875 9.20891 4.18784 8.72727 4.78125 8.72727ZM13.2812 8.72727C13.8747 8.72727 14.3438 9.20891 14.3438 9.81818C14.3438 10.4275 13.8747 10.9091 13.2812 10.9091C12.6878 10.9091 12.2188 10.4275 12.2188 9.81818C12.2188 9.20891 12.6878 8.72727 13.2812 8.72727Z" fill="#48A9C5"/>
+                    </svg>
+                    Get Same Day Shipping in 20+ States
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none">
+                        <path d="M0 13L7.5 0L15 13H0ZM2.35227 11.6316H12.6477L7.5 2.73684L2.35227 11.6316ZM7.5 10.9474C7.69318 10.9474 7.85523 10.8817 7.98614 10.7503C8.11705 10.6189 8.18227 10.4566 8.18182 10.2632C8.18182 10.0693 8.11636 9.90691 7.98545 9.776C7.85455 9.64509 7.69273 9.5794 7.5 9.57895C7.30682 9.57895 7.145 9.64463 7.01455 9.776C6.88409 9.90737 6.81864 10.0698 6.81818 10.2632C6.81818 10.457 6.88364 10.6196 7.01455 10.751C7.14545 10.8824 7.30727 10.9478 7.5 10.9474ZM6.81818 8.89474H8.18182V5.47368H6.81818V8.89474Z" fill="#48A9C5"/>
+                    </svg>
+                    Weight: 0.0 Lbs. | 0.0 Kg
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+                        <path d="M3.62492 1L1 3.25L3.62492 5.875" stroke="#48A9C5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 3.25H9.62267C12.2038 3.25 14.3958 5.35765 14.4964 7.9375C14.6027 10.6636 12.3502 13 9.62267 13H3.2494" stroke="#48A9C5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Easy Return Process
+                </li>
+            </ul>
+        </div>
+
+        <div class="customer_support">
+            <ul>
+                <li class="support_icon"><img src="/stencil/00000000-0000-0000-0000-000000000001/img/customer-support.png"></li>
+                <li class="support_detail">
+                    <div class="heading">
+                        ASK AN EXPERT
+                    </div>
+                    <div class="subheading">
+                        Need Guidance To Find A Perfect Fit For Your Vehicle
+                    </div>
+                    <div class="phone">
+                        (123) 456-7890
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+
+
     </section>
 </div>
 
