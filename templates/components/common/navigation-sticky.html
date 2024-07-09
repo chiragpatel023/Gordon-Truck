@@ -1,0 +1,34 @@
+<div class="subnav level-1">
+    {{#if children}}
+        <a class="navPages-action navPages-action-depth-max has-subMenu is-root second-level-parent sideNavTopLevel needsclick{{#if is_active}} activePage{{/if}}" href="{{url}}">{{name}}
+        <i class="icon navPages-action-moreIcon closed topLevel" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down" /></svg></i>
+        </a>
+        <div class="subnav level-2">
+            <div class="navigation-label"><span class="nav-label">{{name}}</span><i class="icon"><svg><use xlink:href="#icon-chevron-down" /></svg></i></div>
+            {{#each children}}
+                {{#if children}}
+                    <a class="navPages-action level-3-link navPages-action-depth-max has-subMenu {{#if is_active}} activePage{{/if}}" href="{{url}}">{{name}}
+                        <i class="icon navPages-action-moreIcon closed topLevel" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down" /></svg></i>
+                    </a>
+                    <div class="subnav level-3">
+                        <div class="navigation-label"><span class="nav-label">{{name}}</span><i class="icon"><svg><use xlink:href="#icon-chevron-down" /></svg></i></div>
+                        {{#each children}}
+                            {{#if children}}
+                                <a class="navPages-action navPages-action-depth-max has-subMenu {{#if is_active}} activePage{{/if}}" href="{{url}}">{{name}}
+                                    <i class="icon navPages-action-moreIcon closed topLevel" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down" /></svg></i>
+                                </a>
+                                
+                            {{else}}
+                                <a class="navPages-action single-level sideNavTopLevel needsclick{{#if is_active}} activePage{{/if}}" href="{{url}}">{{name}}</a>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                {{else}}
+                    <a class="navPages-action single-level sideNavTopLevel needsclick{{#if is_active}} activePage{{/if}}" href="{{url}}">{{name}}</a>
+                {{/if}}
+            {{/each}}
+        </div>
+    {{else}}
+        <a class="navPages-action single-level sideNavTopLevel needsclick{{#if is_active}} activePage{{/if}}" href="{{url}}">{{name}}</a>
+    {{/if}}
+</div>

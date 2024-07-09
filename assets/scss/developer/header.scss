@@ -477,8 +477,8 @@ body {font-family: "Oswald", sans-serif;}
         }
         .mega-nav {
             .navPages-item {
-                border-bottom: 1px solid #000 !important;
-                padding: 10px 0;
+                // border-bottom: 1px solid #000 !important;
+                // padding: 10px 0;
                 .desktop {
                     a {
                         font-size: 16px !important;
@@ -567,10 +567,91 @@ body {font-family: "Oswald", sans-serif;}
 header ul.navUser-section.navUser-section--alt {
     justify-content: space-between !important;
 }
-
+.mega-cat-dropdown.custom-meganav{
+    direction: ltr !important;
+    background: #fff;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    min-height: calc(72vh - 150px);
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    width: 450px;
+    z-index: 1;
+    margin-top:0;
+}
+.header .mega-cat-nav.active .container-header.btn.active{
+    display: none;
+}
+h2.container-header.title-top {
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .icon{
+        cursor: pointer;
+    }
+}
+.mega-cat-dropdown.custom-meganav::-webkit-scrollbar-thumb{
+    background: #48A9C5 !important;
+}
+.mega-cat-dropdown #page-wrapper .category-list .page a.navPages-action {
+    padding: 12px 15px !important;
+    border-bottom: .5px solid #d9d9d9;
+    color: #000;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 700;
+}
+.subnav.level-2,.subnav.level-3 {
+    display: none;
+}
+.subnav.level-2.open,.subnav.level-3.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 450px;
+    background-color: #fff;
+    z-index: 99;
+    bottom: 0;
+    height: 100%;
+}
+.navigation-label {
+    padding: 12px 15px !important;
+    background-color: #000;
+    width: 100%;
+    direction: rtl;
+    display: flex;
+    justify-content: space-between;
+    .nav-label {
+        color: #fff;
+        font-size: 16px !important;
+        font-style: normal;
+        font-weight: 700;   
+    }
+    .icon{
+        transform: rotate(90deg);
+        svg{
+            fill: #fff !important;
+            height: 22px;
+        }
+    }
+}
 @include responsive ("medium") { 
     .logo-user-section.container {
         background: #000000 !important;
+    }
+    .header #menu-wrapper .mega-cat-dropdown h2.container-header.mobile{
+        display: block;
     }
     .navUser-item svg, li.navUser-item.quicksearch.mobile svg, header .navUser-action .header-icon svg, .header .navUser-action svg {
         fill: #ffffff !important;
