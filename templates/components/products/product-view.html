@@ -8,14 +8,27 @@
         {{/if}}
     {{/each}}
 
-    <section class="productView-details">
+    <section class="productView-details productView-details-top">
         <div class="productView-product">
             {{#if product.brand}}
                 <h2 class="productView-brand">
                     <a href="{{product.brand.url}}"><span>{{product.brand.name}}</span></a>
+                    <span class="stock_status">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="11" viewBox="0 0 20 11" fill="none">
+                        <path d="M0 6.41803L4.8086 11L6.02151 9.83607L1.22151 5.26229M18.7785 0L9.67742 8.68033L6.09893 5.26229L4.86882 6.41803L9.67742 11L20 1.16393M15.1312 1.16393L13.9183 0L8.45591 5.20492L9.67742 6.36066L15.1312 1.16393Z" fill="#01A44C"/>
+                        </svg>
+                        Stock
+                    </span>
                 </h2>
             {{/if}}
             <h1 class="productView-title">{{product.title}}</h1>
+            
+            {{#each product.custom_fields}}
+                {{#contains (JSONstringify name) 'Short Description'}}
+                <div class="short_description">{{value}}</div>
+                {{/contains}}
+            {{/each}}
+            
             <div class="productView-rating"{{#if product.num_reviews '>' 0}}{{/if}}>
                 {{#if settings.show_product_rating}}
                     {{> components/products/ratings rating=product.rating}}
@@ -115,7 +128,7 @@
        </ul>
    </section>
 
-    <section class="productView-details">
+    <section class="productView-details productView-details-bottom">
             <dl class="productView-info">
                 {{!-- {{#if product.sku}}
                   <div class="line-item-details sku">
@@ -229,8 +242,10 @@
 
                 {{#each product.custom_fields}}
                 <div class="line-item-details custom-fields">
-                    <dt class="productView-info-name">{{name}}:</dt>
-                    <dd class="productView-info-value">{{{value}}}</dd>
+                    {{#if name '!=' "Short Description" }}
+                        <dt class="productView-info-name">{{name}}:</dt>
+                        <dd class="productView-info-value">{{{value}}}</dd>
+                    {{/if}}    
                 </div>
                 {{/each}}
             </dl>        
@@ -274,6 +289,9 @@
         {{!-- {{> components/common/share}} --}}  
         {{{snippet 'product_details'}}}
 
+
+        <hr class="above_delivery_section">
+
         <div class="delivery_section">
             <ul>
                 <li>
@@ -297,6 +315,8 @@
                 </li>
             </ul>
         </div>
+
+        <hr class="bottom_delivery_section">
 
         <div class="customer_support">
             <ul>

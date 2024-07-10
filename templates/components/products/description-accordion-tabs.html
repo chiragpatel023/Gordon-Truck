@@ -1,7 +1,7 @@
 <div id="accordion">
   {{#if product.description}}
   {{#if theme_settings.show_product_overview_tab '===' true}}
-    <h3 class="product-description"><span class="tab-title">Product Overview</span> <svg class="accordion-icon arrow down"><use xlink:href="#icon-v-down"></use></svg></h3>
+    <h3 class="product-description"><span class="tab-title showcase-products">Product Overview</span> <svg class="accordion-icon arrow down"><use xlink:href="#icon-v-down"></use></svg></h3>
       <div class="" id="">
         {{{product.description}}}
         {{{snippet 'product_description'}}}
@@ -11,7 +11,7 @@
 
   {{#if theme_settings.show_product_warranty_tab '===' true}}
   {{#if product.warranty}}
-    <h3 class="product-warranty"><span class="tab-title">{{lang 'products.warranty'}}</span> <svg class="accordion-icon arrow down"><use xlink:href="#icon-v-down"></use></svg></h3>
+    <h3 class="product-warranty"><span class="tab-title showcase-products">{{lang 'products.warranty'}}</span> <svg class="accordion-icon arrow down"><use xlink:href="#icon-v-down"></use></svg></h3>
       <div class="" id="">
         {{{product.warranty}}}
       </div>
@@ -20,7 +20,7 @@
 
   {{#if theme_settings.show_product_video_tab '===' true}}
   {{#if product.videos}}
-    <h3 class="product-videos"><span class="tab-title">Product Videos</span> <svg class="accordion-icon arrow down"><use xlink:href="#icon-v-down"></use></svg></h3>
+    <h3 class="product-videos"><span class="tab-title showcase-products">Product Videos</span> <svg class="accordion-icon arrow down"><use xlink:href="#icon-v-down"></use></svg></h3>
     {{#if product.videos.list.length}}
       <div class="" id="">
         {{> components/products/videos product.videos}}
@@ -31,7 +31,7 @@
 
   {{#if settings.show_product_rating}}
   {{#if theme_settings.show_product_reviews_tab '===' true}}
-    <h3 class="product-reviews"><span class="tab-title">Reviews</span> <svg class="accordion-icon arrow down"><use xlink:href="#icon-v-down"></use></svg></h3>
+    <h3 class="product-reviews"><span class="tab-title showcase-products">Reviews</span> <svg class="accordion-icon arrow down"><use xlink:href="#icon-v-down"></use></svg></h3>
     <div class="productView-rating">
               {{#if settings.show_product_rating}}
                   {{> components/products/ratings rating=product.rating}}
