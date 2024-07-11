@@ -117,10 +117,17 @@
             .form-action {
                 float: right !important;
                 width: 76% !important;
-                margin-top: 0 !important;
+                margin-top: -20px !important;
                 @include responsive("small") {
                     float: unset;
                     width: 100%;
+                }
+                svg {
+                    position: relative;
+                    text-align: center;
+                    top: 34px;
+                    z-index: 9999999;
+                    right: -162px;
                 }
             }
             #form-action-addToCart {
@@ -132,10 +139,10 @@
             }   
         }
         .form-wishlist {
-            width: 24%;
+            width: 30%;
             margin-bottom: 25px;
             @include responsive("small") {
-                width: 45%;
+                width: 50%;
             }
             a {
                 text-align: left !important;
@@ -148,6 +155,17 @@
                 line-height: normal;
             }
             .icon {
+                margin-top: 5px;
+            }
+            .dropdown-menu {
+                input, a {
+                    padding: 15px 0;
+                    text-align: center !important;
+                }
+            }
+            .wishlist_icon {
+                float: left;
+                margin-right: 8px;
                 margin-top: 5px;
             }
         }

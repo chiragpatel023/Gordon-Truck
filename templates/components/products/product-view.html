@@ -13,12 +13,16 @@
             {{#if product.brand}}
                 <h2 class="productView-brand">
                     <a href="{{product.brand.url}}"><span>{{product.brand.name}}</span></a>
-                    <span class="stock_status">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="11" viewBox="0 0 20 11" fill="none">
-                        <path d="M0 6.41803L4.8086 11L6.02151 9.83607L1.22151 5.26229M18.7785 0L9.67742 8.68033L6.09893 5.26229L4.86882 6.41803L9.67742 11L20 1.16393M15.1312 1.16393L13.9183 0L8.45591 5.20492L9.67742 6.36066L15.1312 1.16393Z" fill="#01A44C"/>
-                        </svg>
-                        Stock
-                    </span>
+                    {{#if product.out_of_stock}}
+                    {{ else }}
+                        <span class="stock_status">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="11" viewBox="0 0 20 11" fill="none">
+                            <path d="M0 6.41803L4.8086 11L6.02151 9.83607L1.22151 5.26229M18.7785 0L9.67742 8.68033L6.09893 5.26229L4.86882 6.41803L9.67742 11L20 1.16393M15.1312 1.16393L13.9183 0L8.45591 5.20492L9.67742 6.36066L15.1312 1.16393Z" fill="#01A44C"/>
+                            </svg>
+                            Stock
+                        </span>
+                    {{/if}}
+                    
                 </h2>
             {{/if}}
             <h1 class="productView-title">{{product.title}}</h1>
@@ -286,7 +290,7 @@
             {{> components/common/wishlist-dropdown}}
         {{/if}}
         
-        {{!-- {{> components/common/share}} --}}  
+         {{> components/common/share}} 
         {{{snippet 'product_details'}}}
 
 
