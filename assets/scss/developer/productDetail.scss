@@ -108,7 +108,7 @@
             }
             .form-field--increments {
                 float: left;
-                width: 23%;
+                width: 30%;
                 @include responsive("small") {
                     float: unset;
                     width: 100%;
@@ -116,7 +116,7 @@
             }
             .form-action {
                 float: right !important;
-                width: 76% !important;
+                width: 70% !important;
                 margin-top: -20px !important;
                 @include responsive("small") {
                     float: unset;
@@ -125,48 +125,68 @@
                 svg {
                     position: relative;
                     text-align: center;
-                    top: 34px;
+                    top: 37px;
                     z-index: 9999999;
-                    right: -162px;
+                    right: -142px;
                 }
             }
             #form-action-addToCart {
                 border-radius: 0;
                 width: 100%;
+                padding: 14px 0px 14px 0px;
             }
-            .form-increment .button {
-                height: 42px;
+            .form-increment .button, .form-input--incrementTotal {
+                height: 47px;
+                width: 55px;
             }   
         }
-        .form-wishlist {
-            width: 30%;
-            margin-bottom: 25px;
-            @include responsive("small") {
-                width: 50%;
-            }
-            a {
-                text-align: left !important;
-                padding-left: 0 !important;
-                margin-bottom: 0;
-            }
-            [aria-controls = "wishlist-dropdown"] span {
-                font-size: 13px;
-                font-weight: 700;
-                line-height: normal;
-            }
-            .icon {
-                margin-top: 5px;
-            }
-            .dropdown-menu {
-                input, a {
-                    padding: 15px 0;
-                    text-align: center !important;
+        .share_wishlist_section {
+            .wishlist {
+                float: left;
+                width: 28%;
+                .form-wishlist {
+                    @include responsive("small") {
+                        width: 50%;
+                    }
+                    a {
+                        text-align: left !important;
+                        padding-left: 0 !important;
+                        margin-bottom: 0;
+                    }
+                    [aria-controls = "wishlist-dropdown"] span {
+                        font-size: 13px;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                    .icon {
+                        margin-top: 5px;
+                    }
+                    .dropdown-menu {
+                        input, a {
+                            padding: 15px 0;
+                            text-align: center !important;
+                        }
+                    }
+                    .wishlist_icon {
+                        float: left;
+                        margin-right: 8px;
+                        margin-top: 5px;
+                    }
                 }
             }
-            .wishlist_icon {
-                float: left;
-                margin-right: 8px;
-                margin-top: 5px;
+            .share_section {
+                float: right;
+                width: 72%;
+                margin-top: 11px;
+                a {
+                    font-size: 13px;
+                    color: #000000;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                .share_section_details {
+                    display: none;
+                }
             }
         }
         .above_delivery_section {
