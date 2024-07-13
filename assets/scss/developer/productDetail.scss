@@ -1,9 +1,18 @@
+@include responsive ("small") {
+    .product {
+        .container {
+            padding: 0;
+        }
+    }
+}
+
 .product_detail {
     .productView {
         padding-top: 1.5rem;
         @include responsive ("small") {
             display: flex;
             flex-direction: column;
+            margin-bottom: 10px;
         }
     }
     .productView-details-top {
@@ -27,8 +36,8 @@
         margin-bottom: 0;
         padding: 0 20px;
         @include responsive ("small") {
-            padding-left: 1rem;
-            padding-right: 1rem;
+            padding-left: 40px !important;
+            padding-right: 40px !important;
         }
         .productView-brand {
             margin-bottom: 10px;
@@ -51,6 +60,9 @@
                 letter-spacing: 0.08px;
                 text-transform: capitalize;
                 margin-top: 9px;
+                @include responsive ("small") {
+                    margin-top: 4px;
+                }
             }
         }
         .productView-title {
@@ -75,6 +87,9 @@
             font-style: normal;
             font-weight: 600;
             line-height: 20px;
+            @include responsive("small") {
+                margin-bottom: 0;
+            }
             .price--non-sale {
                 color: #183D6A;
                 font-size: 14px;
@@ -120,7 +135,7 @@
                 margin-top: -20px !important;
                 @include responsive("small") {
                     float: unset;
-                    width: 100%;
+                    width: 100% !important;
                 }
                 svg {
                     position: relative;
@@ -128,30 +143,41 @@
                     top: 37px;
                     z-index: 9999999;
                     right: -142px;
-                }
+                    @include responsive("small") {
+                        top: 35px;
+                        right: 60px;
+                    }
+                }  
             }
             #form-action-addToCart {
                 border-radius: 0;
                 width: 100%;
                 padding: 14px 0px 14px 0px;
+                @include responsive("small") {
+                    border-radius: 5px;
+                }
             }
             .form-increment .button, .form-input--incrementTotal {
                 height: 47px;
                 width: 55px;
+                @include responsive("small") {
+                    width: 108px;
+                }
             }   
         }
         .share_wishlist_section {
             .wishlist {
                 float: left;
                 width: 28%;
+                @include responsive("small") {
+                    width: 50%;
+                }
                 .form-wishlist {
-                    @include responsive("small") {
-                        width: 50%;
-                    }
                     a {
                         text-align: left !important;
                         padding-left: 0 !important;
                         margin-bottom: 0;
+                        font-weight: 700;
                     }
                     [aria-controls = "wishlist-dropdown"] span {
                         font-size: 13px;
@@ -178,11 +204,16 @@
                 float: right;
                 width: 72%;
                 margin-top: 11px;
+                @include responsive("small") {
+                    width: 50%;
+                    margin-top: 10px;
+                }
                 a {
                     font-size: 13px;
                     color: #000000;
                     text-decoration: none;
                     cursor: pointer;
+                    font-weight: 700;
                 }
                 .share_section_details {
                     display: none;
@@ -248,6 +279,10 @@
     .productView-description {
         padding-left: 0;
         background: #ffffff;
+        @include responsive("small") {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
         #accordion {
             h3 {
                 padding: 24px 0;
@@ -299,32 +334,37 @@
         .productView-thumbnails {
             margin-top: 16px;
             margin-left: 3px;
+            padding-left: 0;
             .productView-thumbnail {
-                width: 80px !important;
-                height: 65px !important;
+                width: auto;
                 margin-right: 12px;
-                border-radius: 3px;
-                background: #FFF;
-                border: 1px solid #ECECED;
             }
-            .productView-thumbnail:hover { 
+            .image:hover { 
                 border: 1px solid #48A9C5;
             }
             img {
+                width: 80px !important;
+                height: 65px !important;
                 padding-left: 0;
-                width: 78px !important;
-                height: 63px !important;
+                border-radius: 3px;
+                
             }
             a {
                 width: 80px !important;
                 height: 65px !important;
+                background: #ffffff;
                 padding: 0;
             }
         }
+        .productView-thumbnail-link {
+            border: 1px solid #ECECED;
+        }
+        .productView-thumbnail-link:hover {
+            border: 1px solid #48A9C5 !important;
+        }
         .productView-thumbnail-link.is-active {
             border-radius: 3px;
-            border: 1px solid #48A9C5;
-            border-bottom: none !important;
+            border: 1px solid #48A9C5 !important;
         }
     }
     .related-product-section {
