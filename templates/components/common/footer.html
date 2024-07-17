@@ -1654,6 +1654,12 @@ window.addEventListener("resize", function() {
     $("header .customer_support").mouseleave(function(){
       $(".customer_support_detail").hide();
     });
+
+
+    $(".share_wishlist_section .share_section_detail").click(function(){
+      $(".share_section_details").toggle();
+    });
+
     
     $(".navPages-action.has-subMenu").click(function(e){
       e.preventDefault();

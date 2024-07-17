@@ -1047,6 +1047,23 @@
     ]
   },
   {
+    "name": "Contact & Support",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "contact_support_title",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Sub Title",
+        "id": "contact_support_subtitle",
+        "force_reload": true
+      }
+    ]
+  },
+  {
     "name": "Home Page",
     "settings": [
       {
