@@ -1655,9 +1655,25 @@ window.addEventListener("resize", function() {
       $(".customer_support_detail").hide();
     });
 
+
     $(".share_wishlist_section .share_section_detail").click(function(){
       $(".share_section_details").toggle();
     });
-  
+
+    
+    $(".navPages-action.has-subMenu").click(function(e){
+      e.preventDefault();
+      $(this).next().addClass('open');
+    });
+    $('.navigation-label .icon').click(function(){
+      $(this).closest('.subnav').removeClass('open');
+    });
+
+    $('h2.container-header.title-top .icon').click(function(){
+      $('.mega-cat-dropdown.custom-meganav').hide();
+      $('.mega-cat-nav,li.navPages-item.navPages-item-page.container-header.btn').removeClass('active');
+
+    });
+
   });
 </script>
