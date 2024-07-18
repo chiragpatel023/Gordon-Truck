@@ -24,10 +24,10 @@
                 <li class="support_icon"><img src="{{ cdn 'assets/img/customer-support.png' }}" /></li>
                 <li class="support_detail">
                     <div class="heading">
-                        CONTACT & SUPPORT <img class="support_arrow" src="{{ cdn 'assets/img/support_arrow.png' }}" />
+                        {{theme_settings.contact_support_title}} <img class="support_arrow" src="{{ cdn 'assets/img/support_arrow.png' }}" />
                     </div>
                     <div class="subheading">
-                        <span class="status"></span>Live Chat: Online Now
+                        <span class="status"></span>{{theme_settings.contact_support_subtitle}}
                     </div>
                 </li>
             </ul>
@@ -35,6 +35,7 @@
                 <div class="left">
                     <h4>CONTACT</h4>
                     <ul>
+                        {{#if theme_settings.contact_Option_name_1}}
                         <li class="heading_highlight"><?xml version="1.0" encoding="iso-8859-1"?>
                             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                             <svg height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -82,10 +83,14 @@
                                 <g>
                                 </g>
                             </g>
-                            </svg> Live Chat <p>Available 9am</p></li>
+                            </svg> {{theme_settings.contact_Option_name_1}} <p>{{theme_settings.contact_subheading_1}}</p></p></li>
+                        {{/if}}    
+                        {{#if theme_settings.contact_Option_name_2}}
                         <li class="heading_highlight"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 9H17M7 13H12M21 20L17.6757 18.3378C17.4237 18.2118 17.2977 18.1488 17.1656 18.1044C17.0484 18.065 16.9277 18.0365 16.8052 18.0193C16.6672 18 16.5263 18 16.2446 18H6.2C5.07989 18 4.51984 18 4.09202 17.782C3.71569 17.5903 3.40973 17.2843 3.21799 16.908C3 16.4802 3 15.9201 3 14.8V7.2C3 6.07989 3 5.51984 3.21799 5.09202C3.40973 4.71569 3.71569 4.40973 4.09202 4.21799C4.51984 4 5.0799 4 6.2 4H17.8C18.9201 4 19.4802 4 19.908 4.21799C20.2843 4.40973 20.5903 4.71569 20.782 5.09202C21 5.51984 21 6.0799 21 7.2V20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> Text 317-699-6127 <p>Available 9am</p></li>
+                            </svg> {{theme_settings.contact_Option_name_2}} <p>{{theme_settings.contact_subheading_2}}</p></li>
+                        {{/if}}    
+                        {{#if theme_settings.contact_Option_name_3}}    
                         <li class="heading_highlight"><svg width="800px" height="800px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     
                             <title>call [#192]</title>
@@ -102,7 +107,9 @@
                                     </g>
                                 </g>
                             </g>
-                        </svg> Call 317-699-6127 <p>Available 9am</p></li>
+                        </svg> {{theme_settings.contact_Option_name_3}} <p>{{theme_settings.contact_subheading_3}}</p></li>
+                        {{/if}}    
+                        {{#if theme_settings.contact_Option_name_4}}
                         <li class="heading_highlight"><svg width="800px" height="800px" viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     
                             <title>email [#1573]</title>
@@ -119,15 +126,16 @@
                                     </g>
                                 </g>
                             </g>
-                        </svg> Email <p>Response by Tue</p></li>
+                        </svg> {{theme_settings.contact_Option_name_4}} <p>{{theme_settings.contact_subheading_4}}</p></li>
+                        {{/if}}    
                     </ul>
                 </div>
                 <div class="right">
                     <h4>QUICK SUPPORT</h4>
                     <ul>
-                        <li class="heading_highlight"><a href="/order-status">Order Status</a></li>
-                        <li class="heading_highlight"><a href="/shipping-policy">Shipping Policy</a></li>
-                        <li class="heading_highlight"><a href="/returns">Returns</a></li>
+                        {{#if theme_settings.quick_support_Option_name_1}}<li class="heading_highlight"><a href="{{#if theme_settings.quick_support_Option_name_1}}{{theme_settings.quick_support_Option_url_1}}{{/if}}">{{theme_settings.quick_support_Option_name_1}}</a></li>{{/if}}
+                        {{#if theme_settings.quick_support_Option_name_2}}<li class="heading_highlight"><a href="{{#if theme_settings.quick_support_Option_name_2}}{{theme_settings.quick_support_Option_url_2}}{{/if}}">{{theme_settings.quick_support_Option_name_2}}</a></li>{{/if}}
+                        {{#if theme_settings.quick_support_Option_name_3}}<li class="heading_highlight"><a href="{{#if theme_settings.quick_support_Option_name_3}}{{theme_settings.quick_support_Option_url_3}}{{/if}}">{{theme_settings.quick_support_Option_name_3}}</a></li>{{/if}}
                     </ul>
                 </div>
             </div>
