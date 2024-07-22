@@ -5,7 +5,17 @@
         }
     }
 }
+.product_detail_container {
+    background-color: #fff;
+}
 
+article.productView-description {
+    background-color: #fff;
+    display: block;
+    clear: both;
+    float: left;
+    padding: 50px 0;
+}
 .product_detail {
     .productView {
         padding-top: 1.5rem;

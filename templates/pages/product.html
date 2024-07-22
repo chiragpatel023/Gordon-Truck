@@ -17,23 +17,29 @@ product:
     {{#each product.shipping_messages}}
         {{> components/common/alert/alert-info message}}
     {{/each}}
-    <div class="product_detail">
-    <div>
-        {{> components/products/product-view settings=../settings schema=true  }}
+        <div class="product_detail">
+            <div>
+                {{> components/products/product-view settings=../settings schema=true  }}
 
-        {{{region name="product_below_content"}}}
-
+                {{{region name="product_below_content"}}}
+            </div>
+        </div>
+    </div>
         <article class="productView-description">
+            <div class="container">
             {{#if theme_settings.show_product_details_tabs}}
                 {{> components/products/description-accordion-tabs}}
             {{/if}}
+            </div>
         </article>
+    <div class="product_detail_container">
+        <div class="product_detail container">
+            
+                <div class="related-product-section">
+                    {{> components/products/tabs}}
+                </div>
 
-      <div class="related-product-section">
-        {{> components/products/tabs}}
-      </div>
-
-    </div>
+            </div>
 
     {{> components/products/schema}}
 </div>
