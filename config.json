@@ -807,7 +807,27 @@
         "footer-bottom-textColor": "#b2b2b2",
         "footer_payment_section_border_color": "#363636",
         "mobile_menu_icon_color": "#2f2f2b",
-        "visible_subcategoires": false
+        "visible_subcategoires": false,
+        "contact_support_title": "CONTACT & SUPPORT",
+        "contact_support_subtitle": "Live Chat: Online Now",
+        "quick_support_Option_name_1": "Order Status",
+        "quick_support_Option_url_1": "#",
+        "quick_support_Option_name_2": "Shipping Policy",
+        "quick_support_Option_url_2": "#",
+        "quick_support_Option_name_3": "Returns",
+        "quick_support_Option_url_3": "#",
+        "contact_Option_name_1": "Live Chat",
+        "contact_Option_url_1": "#",
+        "contact_subheading_1": "Available 9am",
+        "contact_Option_name_2": "Text 317-699-6127",
+        "contact_Option_url_2": "#",
+        "contact_subheading_2": "Available 9am",
+        "contact_Option_name_3": "Call 317-699-6127",
+        "contact_Option_url_3": "#",
+        "contact_subheading_3": "Available 9am",
+        "contact_Option_name_4": "Email",
+        "contact_Option_url_4": "#",
+        "contact_subheading_4": "Response by Tue"
       }
     },
     {

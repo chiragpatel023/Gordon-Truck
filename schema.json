@@ -1050,6 +1050,10 @@
     "name": "Contact & Support",
     "settings": [
       {
+        "type": "heading",
+        "content": "Heading"
+      },
+      {
         "type": "text",
         "label": "Title",
         "id": "contact_support_title",
@@ -1059,6 +1063,142 @@
         "type": "text",
         "label": "Sub Title",
         "id": "contact_support_subtitle",
+        "force_reload": true
+      },
+      {
+        "type": "heading",
+        "content": "Quick Support Option 1"
+      },
+      {
+        "type": "text",
+        "label": "Option Name",
+        "id": "quick_support_Option_name_1",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Url",
+        "id": "quick_support_Option_url_1",
+        "force_reload": true
+      },
+      {
+        "type": "heading",
+        "content": "Quick Support Option 2"
+      },
+      {
+        "type": "text",
+        "label": "Option Name",
+        "id": "quick_support_Option_name_2",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Url",
+        "id": "quick_support_Option_url_2",
+        "force_reload": true
+      },
+      {
+        "type": "heading",
+        "content": "Quick Support Option 3"
+      },
+      {
+        "type": "text",
+        "label": "Option Name",
+        "id": "quick_support_Option_name_3",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Url",
+        "id": "quick_support_Option_url_3",
+        "force_reload": true
+      },
+      {
+        "type": "heading",
+        "content": "Contact Option 1"
+      },
+      {
+        "type": "text",
+        "label": "Option Name",
+        "id": "contact_Option_name_1",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Url",
+        "id": "contact_Option_url_1",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Subheading",
+        "id": "contact_subheading_1",
+        "force_reload": true
+      },
+      {
+        "type": "heading",
+        "content": "Contact Option 2"
+      },
+      {
+        "type": "text",
+        "label": "Option Name",
+        "id": "contact_Option_name_2",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Url",
+        "id": "contact_Option_url_2",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Subheading",
+        "id": "contact_subheading_2",
+        "force_reload": true
+      },
+      {
+        "type": "heading",
+        "content": "Contact Option 3"
+      },
+      {
+        "type": "text",
+        "label": "Option Name",
+        "id": "contact_Option_name_3",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Url",
+        "id": "contact_Option_url_3",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Subheading",
+        "id": "contact_subheading_3",
+        "force_reload": true
+      },
+      {
+        "type": "heading",
+        "content": "Contact Option 4"
+      },
+      {
+        "type": "text",
+        "label": "Option Name",
+        "id": "contact_Option_name_4",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Url",
+        "id": "contact_Option_url_4",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Option Subheading",
+        "id": "contact_subheading_4",
         "force_reload": true
       }
     ]
