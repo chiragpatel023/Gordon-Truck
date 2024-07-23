@@ -301,7 +301,7 @@ article.productView-description {
             .ui-accordion-header {
                 border: none !important;
                 border-bottom: 1px solid #d7d7d7 !important;
-                background: #ffffff;
+                background-color: #ffffff !important;
             }
             .showcase-products {
                 border-left: none;
@@ -400,4 +400,7 @@ article.productView-description {
             margin-bottom: 0;
         }
     }
+
+    
 }
+
