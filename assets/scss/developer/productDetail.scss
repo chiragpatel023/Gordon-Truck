@@ -448,4 +448,29 @@ article.productView-description {
         width: 21px !important;
         height: 13px !important;
     }
+    .related-product-section {
+        .tab.is-active {
+            border-bottom: none;
+        }
+        .tab {
+            width: 100% !important;
+            .tab-title {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                text-transform: uppercase;
+                border-left: 6px solid #48A9C5;
+                padding: 2px 2px 2px 10px;
+            }
+            .shop-all-link {
+                margin-top: -26px !important;
+            }
+        }
+        .tabs-contents {
+            margin-bottom: 0;
+            .productCarousel {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
