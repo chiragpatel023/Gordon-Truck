@@ -1,0 +1,80 @@
+.body {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.blog {
+    .page_heading_with_breadcrumbs {
+        background-image: url("https://cdn11.bigcommerce.com/s-c8rvhjr1gt/images/stencil/original/image-manager/blog-background.png?t=1722167217");
+        background-repeat: no-repeat;
+        height: 292px;
+        background-size: 100%;
+        padding: 7% 0 6% 0;
+        @include responsive ("small") {
+            background-size: auto;
+            padding: 28% 0;
+        }
+        @include responsive ("medium") {
+            height: auto;
+        }
+        h1 {
+            color: #FFF;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            text-transform: uppercase !important;
+            margin-bottom: 10px !important;
+            margin-top: 0;
+        }
+        .breadcrumbs {
+            margin: 0 !important;
+            li a, li span {
+                color: #FFF;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+            }
+        }
+    }
+    .page-heading-title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 69px;
+        margin-bottom: 33px !important;
+        margin-left: 15px;
+    }
+    .blog-section {
+        margin: 0 !important;
+    }
+    .blog-post-body {
+        .blog-title {
+            a {
+                color: #000;
+                font-size: 16px !important;
+                font-style: normal !important;
+                font-weight: 400 !important;
+                text-transform: uppercase !important;
+            }
+        }
+        .posted_author {
+            text-align: left;
+            color: #000;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .posted_date {
+            color: #BABABA;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 34px;
+        }
+        .date_pipe {
+            color: #BABABA;
+            margin: 0 6px;
+        }
+    }
+}

@@ -7,9 +7,16 @@ blog:
 ---
 {{#partial "page"}}
 
+</div>
 <main class="page blog">
-  {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-    <h1 class="page-heading">{{ blog.name }}</h1>
+    
+    <div class="page_heading_with_breadcrumbs">
+        <h1 class="page-heading">{{ blog.name }}</h1>
+        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    </div>  
+
+<div class="container">    
+    <h2 class="page-heading-title showcase-products">Gallery Highlights</h2>
     <div class="blog-container">
         {{#each blog.posts}}
             {{> components/blog/post-page post=this}}

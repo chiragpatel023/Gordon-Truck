@@ -15,7 +15,7 @@
     "blog": {
         "recent_posts": "Recent Posts",
         "label": "Blog",
-        "posted_by": "Posted by {name}"
+        "posted_by": "{name}"
     },
     "unavailable": {
         "hibernation_title": "We'll be back",

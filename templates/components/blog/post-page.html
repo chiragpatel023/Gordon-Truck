@@ -1,4 +1,4 @@
-<article class="blog">
+<article class="blog blog-section">
     <div class="blog-post-figure">
       {{#if post.thumbnail}}
           <figure class="blog-thumbnail blog-image uploaded">
@@ -14,12 +14,13 @@
     <div class="blog-post-body">
         <header class="blog-header">
             <h2 class="blog-title">
-                <a href="{{post.url}}" data-maxlength="24">{{post.title}}</a>
+                <a href="{{post.url}}">{{post.title}}</a>
             </h2>
-            <p class="blog-date" data-maxlength="55">{{#if post.author}}{{lang 'blog.posted_by' name=post.author}} on {{/if}}{{post.date_published}}</p>
+            <p class="posted_author" data-maxlength="55">{{#if post.author}}{{lang 'blog.posted_by' name=post.author}}
+                 {{/if}} <span class="date_pipe">|</span><span class="posted_date">{{post.date_published}}</span></p>
         </header>
 
-        <div class="blog-post">
+        {{!-- <div class="blog-post">
             {{#if post.body}}
                 {{{post.body}}}
             {{else}}
@@ -28,10 +29,10 @@
                     &hellip; <a class="read-more" href="{{url}}">read more</a>
                 {{/if}}
             {{/if}}
-        </div>
+        </div> --}}
 
 
-        {{#if show_tags}}
+        {{!--  {{#if show_tags}}
             {{#if post.tags}}
                 <ul class="tags">
                     {{#each post.tags}}
@@ -41,9 +42,9 @@
                     {{/each}}
                 </ul>
             {{/if}}
-        {{/if}}
+        {{/if}} --}}
 
-        {{>components/common/share url=post.url}}
+        {{!-- {{>components/common/share url=post.url}} --}}
 
     </div>
 </article>
