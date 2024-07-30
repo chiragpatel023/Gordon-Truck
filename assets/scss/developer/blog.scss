@@ -82,8 +82,42 @@
         width: 100%;
         float: left;
         margin-top: -1px;
+        margin-bottom: 40px;
+        height: 450px;
         .page-heading-title {
             margin-top: 0;
+            color: #ffffff;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        article {
+            .blog-post-body {
+                h2 {
+                    a {
+                        color: #ffffff;
+                    }
+                }
+            }
+            .posted_author {
+                color: #ffffff;
+            }
+        }
+    }
+    .all_blogs {
+        .page-heading-title {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 33px !important;
+            margin-left: 15px;
+        }
+        .pipe {
+            color: #48A9C5;
+            font-size: 34px;
+            margin-right: 8px;
         }
     }
 }
