@@ -4,6 +4,10 @@ blog:
         limit: 5
         pages: 3
         summary: 200
+featureblog:
+  blog:
+    posts:
+            limit: 3        
 ---
 {{#partial "page"}}
 
@@ -14,6 +18,17 @@ blog:
         <h1 class="page-heading">{{ blog.name }}</h1>
         {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
     </div>  
+
+    <div class="feature_blog">
+      <div class="container">
+        <h2 class="page-heading-title showcase-products">Featured Post</h2>
+        {{#each blog.posts}}
+          {{#if @index '<' '3'}}
+            {{> components/blog/post-page post=this}}
+          {{/if}}
+        {{/each}}
+        </div>
+    </div>
 
 <div class="container">    
     <h2 class="page-heading-title showcase-products">Gallery Highlights</h2>
