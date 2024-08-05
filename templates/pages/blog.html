@@ -7,17 +7,69 @@ blog:
 ---
 {{#partial "page"}}
 
+</div>
+<div>
 <main class="page blog">
-  {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+  
+  <div class="page_heading_with_breadcrumbs">
     <h1 class="page-heading">{{ blog.name }}</h1>
-    <div class="blog-container">
-        {{#each blog.posts}}
-            {{> components/blog/post-page post=this}}
-        {{/each}}
-    </div>
-    <div class="clear"></div>
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+  </div>
 
-    {{> components/common/paginator pagination.blog}}
+  <div class="feature_blog">
+    <div class="container">
+      <h2 class="page-heading-title showcase-products">Featured Post</h2>
+      <div class="productCarousel slick-list draggable" data-product-type="categories"  data-slick='{
+        "dots": false,
+        "infinite": false,
+        "mobileFirst": false,
+        "slidesToShow": 3,
+        "slidesToScroll": 1,
+        "responsive": [
+        {
+          "breakpoint": 980,
+          "settings": {
+            "slidesToShow": 3,
+            "slidesToScroll": 1
+          }
+        },
+        {
+          "breakpoint": 800,
+          "settings": {
+            "slidesToShow": 3,
+            "slidesToScroll": 1
+          }
+        },
+          {
+            "breakpoint": 550,
+            "settings": {
+              "slidesToShow": 1,
+              "slidesToScroll": 1
+            }
+          }
+        ]
+    }'>
+      {{#each blog.posts}}
+        {{#if @index '<' '5'}}
+          {{> components/blog/post-page post=this}}
+        {{/if}}
+      {{/each}}
+      </div>
+    </div>
+  </div>
+
+  <div class="all_blogs container">
+      <h1 class="page-heading-title"><span class="pipe">|</span>Gallery Highlights</h1>
+      <div class="blog-container">
+          {{#each blog.posts}}
+              {{> components/blog/post-page post=this}}
+          {{/each}}
+      </div>
+      <div class="clear"></div>
+
+      {{> components/common/paginator pagination.blog}}
+  </div>
+    
 </main>
 
 {{/partial}}

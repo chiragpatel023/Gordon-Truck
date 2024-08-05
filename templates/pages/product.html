@@ -25,23 +25,23 @@ product:
             </div>
         </div>
     </div>
-        <article class="productView-description">
+        <article class="productView-description description_tab_section">
             <div class="container">
             {{#if theme_settings.show_product_details_tabs}}
                 {{> components/products/description-accordion-tabs}}
             {{/if}}
             </div>
         </article>
-    <div class="product_detail_container">
-        <div class="product_detail container">
-            
-                <div class="related-product-section">
-                    {{> components/products/tabs}}
-                </div>
+    
 
-            </div>
+        <div class="related-product-section">
+            {{> components/products/tabs}}
+        </div>
+
+
+        
 
     {{> components/products/schema}}
-</div>
+
 {{/partial}}
 {{> layout/product}}
