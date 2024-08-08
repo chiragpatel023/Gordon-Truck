@@ -240,6 +240,16 @@
                     }
                 }
             }
+            .navList-action--checkbox.is-checked::after, .navList-action--checkbox.is-selected::after {
+                background-color: #48A9C5;
+            }
+            .navList-action--checkbox::before {
+                width: 16px;
+                height: 16px;
+            }
+            .navList-action--checkbox::after {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 10 8' fill='none'%3E%3Cpath d='M4.12557 7C4.07918 7 4.03278 6.97532 3.98639 6.95065L1.08685 4.53227C0.99407 4.45824 0.970873 4.2855 1.04046 4.18679C1.11005 4.08808 1.27243 4.0634 1.36521 4.13743L4.10237 6.40774L8.60245 1.07745C8.69524 0.978739 8.83441 0.978739 8.9272 1.05277C9.01999 1.15148 9.01999 1.29954 8.9504 1.39825L4.31114 6.90129C4.26475 6.97532 4.19516 7 4.12557 7Z' fill='%23757575' stroke='white'/%3E%3C/svg%3E");
+            }
         }
         .filter_icon {
             display: none;
