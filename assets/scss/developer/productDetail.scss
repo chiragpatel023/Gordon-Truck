@@ -20,6 +20,18 @@ article.productView-description {
         padding: 0 20px;
     }
 }
+.related-container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $layout-widthMax;
+    // padding: 0 $container-padding;
+    // position: relative;
+    width: layout("fixed");
+
+    @include breakpoint("large") {
+        // padding: 0 ($container-padding * 4);
+    }
+}
 .product_detail {
     .productView {
         padding-top: 1.5rem;

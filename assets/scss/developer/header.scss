@@ -646,6 +646,27 @@ h2.container-header.title-top {
         }
     }
 }
+@media (max-width: 768px)  {
+    
+    #menu-wrapper #menu.is-open .mega-cat-dropdown.custom-meganav {
+        display: block !important;
+        background-color: #000;
+        position: fixed;
+        overflow: hidden;
+        padding: 0 !important;
+        height: 100vh !important;
+        width: 100%;
+        padding-top: 100px !important;
+    }
+    
+    body.has-activeNavPages {
+        overflow: hidden;
+        position: fixed;
+    }
+    #menu-wrapper #menu .mega-cat-dropdown{
+        display: none !important;
+    }
+}
 @include responsive ("medium") { 
     .logo-user-section.container {
         background: #000000 !important;

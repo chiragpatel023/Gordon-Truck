@@ -58,7 +58,8 @@ blog:
     </div>
   </div>
 
-  <div class="all_blogs container">
+  <div class="all_blogs">
+    <div class="container">
       <h1 class="page-heading-title"><span class="pipe">|</span>Gallery Highlights</h1>
       <div class="blog-container">
           {{#each blog.posts}}
@@ -68,6 +69,7 @@ blog:
       <div class="clear"></div>
 
       {{> components/common/paginator pagination.blog}}
+    </div>
   </div>
     
 </main>
