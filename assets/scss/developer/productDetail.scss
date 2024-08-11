@@ -27,7 +27,9 @@ article.productView-description {
     // padding: 0 $container-padding;
     // position: relative;
     width: layout("fixed");
-
+    @include responsive("small") {
+        padding: 25px;
+    }
     @include breakpoint("large") {
         // padding: 0 ($container-padding * 4);
     }
@@ -36,6 +38,9 @@ article.productView-description {
             width: 100%;
             border-bottom: none !important;
             margin-top: 50px;
+            @include responsive("small") {
+                margin-top: 20px;
+            }
             .tab-title {
                 float: left;
                 width: 95%;
@@ -44,6 +49,16 @@ article.productView-description {
             }
             .shop-all-link {
                 margin-top: 23px;
+                @include responsive("small") {
+                    margin-top: -25px;
+                }
+            }
+            .productCarousel {
+                .productCarousel-slide {
+                    @include responsive("small") {
+                        
+                    }
+                }
             }
         }
     }
@@ -203,7 +218,7 @@ article.productView-description {
                 height: 47px;
                 width: 55px;
                 @include responsive("small") {
-                    width: 102px;
+                    width: 125px;
                 }
             }   
         }
@@ -367,6 +382,9 @@ article.productView-description {
     } */
     .productView-images {
         order: 1;
+        @include responsive("small") {
+            padding: 0 30px;
+        }
         .productView-img-container {
             img {
                 border-radius: 5px;
