@@ -31,6 +31,22 @@ article.productView-description {
     @include breakpoint("large") {
         // padding: 0 ($container-padding * 4);
     }
+    .tabs {
+        .tab {
+            width: 100%;
+            border-bottom: none !important;
+            margin-top: 50px;
+            .tab-title {
+                float: left;
+                width: 95%;
+                margin-bottom: 0 !important;
+                padding: 6px 6px 6px 8px;
+            }
+            .shop-all-link {
+                margin-top: 23px;
+            }
+        }
+    }
 }
 .product_detail {
     .productView {
