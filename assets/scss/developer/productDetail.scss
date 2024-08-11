@@ -1,3 +1,15 @@
+.product {
+    .breadcrumbs {
+        @include responsive ("small") { 
+            margin-top: 70px;
+            padding: 0 15px;
+        }
+        @include responsive ("medium") { 
+            margin-top: 70px;
+            padding: 0 15px;
+        }        
+    }
+}
 @include responsive ("small") {
     .product {
         .container {
@@ -220,7 +232,7 @@ article.productView-description {
                 height: 47px;
                 width: 55px;
                 @include responsive("small") {
-                    width: 125px;
+                    width: 112px;
                 }
             }   
         }
@@ -385,7 +397,7 @@ article.productView-description {
     .productView-images {
         order: 1;
         @include responsive("small") {
-            padding: 0 30px;
+            padding: 0 25px !important;
         }
         @include responsive("medium") {
             border-radius: 0;

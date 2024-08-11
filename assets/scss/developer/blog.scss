@@ -15,6 +15,7 @@
         }
         @include responsive ("medium") {
             height: auto;
+            padding: 7% 0 3% 0;
         }
         h1 {
             color: #FFF;
@@ -110,15 +111,15 @@
                 color: #ffffff;
             }
         }
-        // .slick-prev:before, .slick-next:before {
-        //     display:none;
-        //     background-color: transparent !important;
-        //     border: none !important;
-        // }
-        // .slick-prev,.slick-next {
-        //     background-color: transparent !important;
-        //     border: none !important;
-        // }
+        .slick-prev:before, .slick-next:before {
+            display:none;
+            background-color: transparent !important;
+            border: none !important;
+        }
+        .slick-prev,.slick-next {
+            background-color: transparent !important;
+            border: none !important;
+        }
     }
     .all_blogs {
         .page-heading-title {
