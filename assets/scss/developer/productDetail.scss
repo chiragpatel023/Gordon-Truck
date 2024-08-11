@@ -30,6 +30,9 @@ article.productView-description {
     @include responsive("small") {
         padding: 25px;
     }
+    @include responsive("medium") {
+        padding: 25px;
+    }
     @include breakpoint("large") {
         // padding: 0 ($container-padding * 4);
     }
@@ -39,6 +42,9 @@ article.productView-description {
             border-bottom: none !important;
             margin-top: 50px;
             @include responsive("small") {
+                margin-top: 20px;
+            }
+            @include responsive("medium") {
                 margin-top: 20px;
             }
             .tab-title {
@@ -52,12 +58,8 @@ article.productView-description {
                 @include responsive("small") {
                     margin-top: -25px;
                 }
-            }
-            .productCarousel {
-                .productCarousel-slide {
-                    @include responsive("small") {
-                        
-                    }
+                @include responsive("medium") {
+                    margin-top: -25px;
                 }
             }
         }
@@ -385,10 +387,17 @@ article.productView-description {
         @include responsive("small") {
             padding: 0 30px;
         }
+        @include responsive("medium") {
+            border-radius: 0;
+            padding: 0;
+        }
         .productView-img-container {
             img {
                 border-radius: 5px;
                 border: 1px solid #ECECED;
+            }
+            @include responsive("medium") {
+                max-width: 100%;
             }
         }
         .productView-thumbnails {
