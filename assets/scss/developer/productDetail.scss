@@ -1,3 +1,15 @@
+.product {
+    .breadcrumbs {
+        @include responsive ("small") { 
+            margin-top: 70px;
+            padding: 0 15px;
+        }
+        @include responsive ("medium") { 
+            margin-top: 70px;
+            padding: 0 15px;
+        }        
+    }
+}
 @include responsive ("small") {
     .product {
         .container {
@@ -27,9 +39,42 @@ article.productView-description {
     // padding: 0 $container-padding;
     // position: relative;
     width: layout("fixed");
-
+    @include responsive("small") {
+        padding: 25px;
+    }
+    @include responsive("medium") {
+        padding: 25px;
+    }
     @include breakpoint("large") {
         // padding: 0 ($container-padding * 4);
+    }
+    .tabs {
+        .tab {
+            width: 100%;
+            border-bottom: none !important;
+            margin-top: 50px;
+            @include responsive("small") {
+                margin-top: 20px;
+            }
+            @include responsive("medium") {
+                margin-top: 20px;
+            }
+            .tab-title {
+                float: left;
+                width: 95%;
+                margin-bottom: 0 !important;
+                padding: 6px 6px 6px 8px;
+            }
+            .shop-all-link {
+                margin-top: 23px;
+                @include responsive("small") {
+                    margin-top: -25px;
+                }
+                @include responsive("medium") {
+                    margin-top: -25px;
+                }
+            }
+        }
     }
 }
 .product_detail {
@@ -187,7 +232,7 @@ article.productView-description {
                 height: 47px;
                 width: 55px;
                 @include responsive("small") {
-                    width: 102px;
+                    width: 112px;
                 }
             }   
         }
@@ -351,10 +396,20 @@ article.productView-description {
     } */
     .productView-images {
         order: 1;
+        @include responsive("small") {
+            padding: 0 25px !important;
+        }
+        @include responsive("medium") {
+            border-radius: 0;
+            padding: 0;
+        }
         .productView-img-container {
             img {
                 border-radius: 5px;
                 border: 1px solid #ECECED;
+            }
+            @include responsive("medium") {
+                max-width: 100%;
             }
         }
         .productView-thumbnails {
