@@ -717,3 +717,25 @@ h2.container-header.title-top {
         top: 6px !important;
     }
 }
+
+
+.header div#menu {
+    @include responsive ("small") {
+        z-index: 0 !important;
+    }
+}
+.header .topbar {
+    @include responsive ("small") {
+        z-index: 1 !important;
+        position: relative;
+    }
+    // div {
+    //     @include responsive ("small") { 
+    //         z-index: 1 !important;
+    //         position: relative;
+    //     }
+    // }
+    .sd-simple-text-ecf963f1-9a19-482a-b27a-388b357e3498 {
+        text-align: left;
+    }
+}
