@@ -212,6 +212,12 @@ body {font-family: "Oswald", sans-serif;}
                 }
                 .top-level {
                     padding-right: 18px;
+
+                    a {
+                        @include responsive ("small") {
+                            font-size: 12px !important;
+                        }
+                    }
                 }
                 .mobile-icon-active svg {
                     fill: #ffffff !important;
@@ -595,8 +601,14 @@ h2.container-header.title-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include responsive ("small") {
+        padding-left: 10px;
+    }
     .icon{
         cursor: pointer;
+        @include responsive ("small") {
+            display: none;
+        }
     }
 }
 .mega-cat-dropdown.custom-meganav::-webkit-scrollbar-thumb{
@@ -609,6 +621,10 @@ h2.container-header.title-top {
     font-size: 14px !important;
     font-style: normal;
     font-weight: 700;
+    @include responsive ("small") {
+        font-size: 14px !important;
+        font-weight: 400;
+    }
 }
 .subnav.level-2,.subnav.level-3 {
     display: none;
@@ -656,7 +672,8 @@ h2.container-header.title-top {
         padding: 0 !important;
         height: 100vh !important;
         width: 100%;
-        padding-top: 100px !important;
+        padding-top: 0px !important;
+        margin-top: 92px;
     }
     
     body.has-activeNavPages {
@@ -720,9 +737,9 @@ h2.container-header.title-top {
 
 
 .header div#menu {
-    @include responsive ("small") {
-        z-index: 0 !important;
-    }
+    // @include responsive ("small") {
+    //     z-index: 0 !important;
+    // }
 }
 .header .topbar {
     @include responsive ("small") {
